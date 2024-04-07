@@ -1,97 +1,179 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>MJE IT</title>
-        <meta name="description" content="Professional IT Services." /> 
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>MJE IT</title>
+    <meta name="description" content="Professional IT Services." />
 
-        <!--Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Arimo:400,400i,700,700i" rel="stylesheet">
+    <!--Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Arimo:400,400i,700,700i" rel="stylesheet">
 
-        <!--vendors styles-->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--vendors styles-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-        <!-- Bootstrap CSS / Color Scheme -->
-        <link rel="stylesheet" href="css/black.css" id="theme-color">
-        <link rel="icon" type="image/x-icon" href="/img/MJE Logo (3).png">
-    </head>
-    <body>
+    <!-- Bootstrap CSS / Color Scheme -->
+    <link rel="stylesheet" href="css/black.css" id="theme-color">
+    <link rel="icon" type="image/x-icon" href="/img/MJE Logo (3).png">
+    <style>
+        /* Custom style to change toggle button color */
+        .navbar-toggler-icon {
+            background-color: black !important; /* Ensure the color change takes precedence */
+        }
 
-        <!--navigation-->
-        <nav class="navbar navbar-expand-md navbar-light bg-white fixed-top sticky-navigation">
-            <a class="navbar-brand mx-auto" href="index.html">
-                <img src="img/MJE Logo (4).PNG" class="img-fluid d-block mx-auto" alt="Google Design"/>
-            </a>
-            <button class="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse" 
-                    data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                <span data-feather="grid"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link page-scroll" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link page-scroll" href="#services">Services</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link page-scroll" href="#process">Process</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link page-scroll" href="#blog">Blog</a>
-                    </li>
-                </ul>
-                <form class="form-inline">
-                    <p class="mb-0 mx-3"><a class="page-scroll font-weight-bold" href="#contact">Work with us</a></p>
-                </form>
-            </div>
-        </nav>
-        
-        <!--hero header-->
-        
-        <section class="pt-7 pt-md-8" id="home" style="background-color: black; color: white;">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8 mx-auto my-auto text-center">
-                        <h1 style="color: white;">Professional Technology Assistance</h1>
-                        <p class="lead mt-4 mb-5">
-                            Empowering Success: Over 10,000 Users Served and 2,000 Servers Seamlessly Migrated. Your Professional Services Partner for the Future.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-      
+        /* Custom style to change the color of the dropdown button */
+        .dropdown-toggle {
+            color: black !important; /* Change the color of the button text */
+            background-color: white !important; /* Change the background color of the button */
+            border: none !important; /* Remove border */
+        }
+
+        /* Custom style to position the dropdown menu on the right */
+        .dropdown-menu-right {
+            right: 0;
+            left: auto;
+        }
+
+        /* Custom style for contact information, address, and social icons */
+        .navbar-nav {
+            display: flex;
+            align-items: center;
+        }
+
+        .contact-info {
+            margin-left: auto;
+            margin-right: 20px; /* Adjust the right margin as needed */
+            text-align: right;
+        }
+
+        .social-icons {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: right;
+        }
+
+        .social-icons li {
+            display: inline-block;
+            margin-left: 10px; /* Adjust the left margin as needed */
+        }
+
+        .social-icons li:first-child {
+            margin-left: 10px; /* Adjust the left margin as needed */
+        }
+
+        .social-icons li a {
+            color: #000; /* Adjust color as needed */
+        }
+
+        .social-icons .linkedin {
+            margin-left: 5px; /* Adjust the left margin for LinkedIn icon */
+        }
+
+        /* Custom style for aligning dropdown menu text to the right */
+        .dropdown-menu-right .dropdown-item {
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md navbar-light bg-white fixed-top sticky-navigation">
+    <a class="navbar-brand mx-auto" href="index.html">
+        <img src="img/MJE Logo (4).PNG" class="img-fluid d-block mx-auto" alt="Google Design"/>
+    </a>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav ml-auto">
+            <!-- Empty list for dropdown button -->
+        </ul>
+    </div>
+    <div class="contact-info">
+        <p>Contact: info@mjeit.com | Phone: +123456789</p>
+        <p>1234 Street Name, City, Country</p>
+    </div>
+    <ul class="social-icons">
+        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+        <li class="linkedin" style="margin-left: 10px;"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+        <!-- Add more social icons as needed -->
+    </ul>
+    <button class="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse"
+            data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <img src="dropdown_icon.png" alt="dropdown-icon"> <!-- Replace with the actual dropdown icon -->
+    </button>
+    <div class="dropdown ml-auto">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <!-- Using the menu icon as before -->
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item page-scroll" href="#about">About</a>
+            <a class="dropdown-item page-scroll" href="#services">Services</a>
+            <a class="dropdown-item page-scroll" href="#process">Process</a>
+            <a class="dropdown-item page-scroll" href="#blog">Blog</a>
+            <a class="dropdown-item page-scroll" href="#contact">Work with us</a>
         </div>
-        <!-- about section -->
-        <section class="pb-7" id="about">
-            <div class="container">
-                <hr class="my-6"/>
-                <div class="row">
-                    <div class="col-md-6 mx-auto text-center">
-                        <h4 class="dot-circle font-weight-normal">Established in 2023
+    </div>
+</nav>
 
-                            With 15 years of industry experience and a deep understanding of the ever-evolving IT landscape we are committed to equipping you with the knowledge,
-                            skills and resources needed to thrive in the digital era. </h4>
-                    </div>
-                </div>
 
-                <div class="row mt-5">
-                    <div class="col-md-6 order-2 order-md-1 my-md-auto">
-                        <h3>Our Goal</h3>
-                        <p class="text-muted lead">
-                            Our mission is to bridge the gap between technology and individuals, enabling them to harness the full potential of IT for personal and professional growth. 
-                        </p>
-                    </div>
-                    <div class="col-md-6 order-1 order-md-2">
-                        <img src="img/google-design.jpeg" class="img-fluid d-block mx-auto" alt="Google Design"/>
-                    </div>
-                </div>
-
+    <!--hero header--> 
+<section class="pt-7 pt-md-8" id="home" style="background-color: black; color: white;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 mx-auto my-auto text-center">
+                <h1 style="color: white;">Professional Technology Assistance</h1>
+                <p class="lead mt-4 mb-5">
+                    Empowering Success: Over 10,000 Users Served and 2,000 Servers Seamlessly Migrated. Your Professional Services Partner for the Future.
+                </p>
             </div>
-        </section>
+        </div>
+    </div>
+</section>
+
+<!-- Banner Section -->
+<section class="banner-section" style="background-color: #f7f7f7; color: #333; text-align: center; padding: 40px 0; margin-top: -30px;">
+    <div class="container">
+        <h2>Special Offer: Get 20% Off on IT Consultation Services</h2>
+        <p>Limited Time Offer - Contact us now to avail!</p>
+        <button class="btn btn-primary">Contact Us</button>
+    </div>
+</section>
+
+<!-- about section -->
+<section class="pb-7" id="about" style="margin-top: -120px;">
+    <div class="container">
+        <hr class="my-6"/>
+        <div class="row">
+            <div class="col-md-6 order-md-2 text-left">
+                <h4 class="dot-circle font-weight-normal">Established in 2023
+                    With 15 years of industry experience and a deep understanding of the ever-evolving IT landscape we are committed to equipping you with the knowledge,
+                    skills and resources needed to thrive in the digital era. 
+                </h4>
+            </div>
+            <div class="col-md-6 order-md-1">
+                <img src="img/google-design.jpeg" class="img-fluid d-block mx-auto" alt="Google Design"/>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-md-6 order-md-1 my-md-auto">
+                <h3>Our Goal</h3>
+                <p class="text-muted lead">
+                    Our mission is to bridge the gap between technology and individuals, enabling them to harness the full potential of IT for personal and professional growth. 
+                </p>
+            </div>
+            <div class="col-md-6 order-md-2">
+                <img src="img/google-design.jpeg" class="img-fluid" alt="Image Description">
+            </div>
+        </div>
+        
+
+    </div>
+</section>
+
+
 
         <!--services section-->
         <section class="bg-light py-7" id="services">
@@ -197,64 +279,6 @@
                         <h2 class="text-white">We've helped some of the world's top companies.</h2>
                         <p class="lead text-white my-4">Want to hear more?</p>
                         <button class="btn btn-primary">Request a free quote</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!--process-->
-        <section class="py-7" id="process">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-7 mx-auto text-center">
-                        <h2>How we work</h2>
-                        <p class="lead text-muted">
-                            Our process is designed to ensure that we understand your needs, design effective solutions, and implement them efficiently. We believe in continuous improvement and long-term partnerships. Read on to learn more about our work process.
-                        </p>
-                    </div>
-                </div>
-                <div class="row mt-5">
-                    <div class="col-md-7 mx-auto timeline">
-                        <div class="media pb-5">
-                            <div class="icon-box mt-1">
-                                <div class="icon-box-inner small-xs text-primary">
-                                    <span data-feather="disc"></span>
-                                </div>
-                            </div>
-                            <div class="media-body">
-                                <h5>Discovery</h5>
-                            </div>
-                        </div>
-                        <div class="media pb-5">
-                            <div class="icon-box mt-1">
-                                <div class="icon-box-inner small-xs text-primary">
-                                    <span data-feather="copy"></span>
-                                </div>
-                            </div>
-                            <div class="media-body">
-                                <h5>Consultation</h5>
-                            </div>
-                        </div>
-                        <div class="media pb-5">
-                            <div class="icon-box mt-1">
-                                <div class="icon-box-inner small-xs text-primary">
-                                    <span data-feather="box"></span>
-                                </div>
-                            </div>
-                            <div class="media-body">
-                                <h5>QA & Testing</h5>
-                            </div>
-                        </div>
-                        <div class="media">
-                            <div class="icon-box mt-1">
-                                <div class="icon-box-inner small-xs text-primary">
-                                    <span data-feather="server"></span>
-                                </div>
-                            </div>
-                            <div class="media-body">
-                                <h5>Deployment</h5>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
