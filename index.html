@@ -117,7 +117,15 @@
                 <a class="dropdown-item page-scroll" href="#about">About</a>
                 <a class="dropdown-item page-scroll" href="#services">Services</a>
                 <a class="dropdown-item page-scroll" href="#blog">Blog</a>
-                <a class="dropdown-item page-scroll" href="https://formspree.io/f/xayrlqwn">Work with us</a> <!-- Update the href attribute -->
+                <a class="dropdown-item" href="#" onclick="scrollToContact()">Work with us</a>
+                <script>
+                    function scrollToContact() {
+                        document.querySelector('#contact').scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                </script>
+                
             </div>
         </div>
     </nav>
@@ -326,6 +334,9 @@
         </section>
 
 <!--contact section-->
+<section id="contact" class="py-7 bg-light">
+    <!-- Contact form content goes here -->
+</section>
 <div style="max-width: 400px; margin: 20px auto; padding: 20px; background: #ffffff; border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
 
     <h2 style="text-align: center;">Contact Us</h2>
