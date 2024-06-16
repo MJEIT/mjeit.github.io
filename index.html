@@ -1,398 +1,204 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MJE IT</title>
-    <meta name="description" content="Professional IT Services." />
-
-    <!--Google fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Arimo:400,400i,700,700i" rel="stylesheet">
-
-    <!--vendors styles-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <!-- Bootstrap CSS / Color Scheme -->
-    <link rel="stylesheet" href="css/black.css" id="theme-color">
-    <link rel="icon" type="image/x-icon" href="/img/MJE Logo (3).png">
+    <meta name="description" content="Professional IT Services.">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
     <style>
-        /* Custom style to change toggle button color */
-        .navbar-toggler-icon {
-            background-color: black !important; /* Ensure the color change takes precedence */
+        /* Custom styles for the header section */
+        .header-section {
+            background-color: #000;
+            color: #fff;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            text-align: center;
         }
-
-        /* Custom style to change the color of the dropdown button */
-        .dropdown-toggle {
-            color: black !important; /* Change the color of the button text */
-            background-color: white !important; /* Change the background color of the button */
-            border: none !important; /* Remove border */
+        .header-section .logo img {
+            max-height: 50px; /* Adjust logo height as needed */
+            margin-top: 10px; /* Optional: Adjust logo margin */
         }
-
-        /* Custom style to position the dropdown menu on the right */
-        .dropdown-menu-right {
-            right: 0;
-            left: auto;
+        .header-section h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 20px;
         }
-
-        /* Custom style for contact information, address, and social icons */
-        .navbar-nav {
-            display: flex;
-            align-items: center;
+        .header-section p {
+            font-size: 1.2rem;
+            line-height: 1.6;
         }
-
-        .contact-info {
-            margin-left: auto;
-            margin-right: 20px; /* Adjust the right margin as needed */
-            text-align: right;
+        /* Custom styles for the slider content */
+        .slider-content {
+            background-color: #f8f9fa;
+            padding: 100px 0;
+            text-align: center;
         }
-
-        .social-icons {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            text-align: right;
+        .slider-content h2 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 30px;
         }
-
-        .social-icons li {
-            display: inline-block;
-            margin-left: 10px; /* Adjust the left margin as needed */
+        .slider-content p {
+            font-size: 1.1rem;
+            line-height: 1.6;
         }
-
-        .social-icons li:first-child {
-            margin-left: 10px; /* Adjust the left margin as needed */
+        .slider-content .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+            margin-top: 20px;
         }
-
-        .social-icons li a {
-            color: #000; /* Adjust color as needed */
+        .slider-content .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
         }
-
-        .social-icons .linkedin {
-            margin-left: 5px; /* Adjust the left margin for LinkedIn icon */
+        /* Custom styles for the carousel indicators */
+        .carousel-indicators {
+            bottom: 10px;
         }
-
-        /* Custom style for aligning dropdown menu text to the right */
-        .dropdown-menu-right .dropdown-item {
-            text-align: right;
+        .carousel-indicators li {
+            background-color: #007bff;
+        }
+        .carousel-indicators .active {
+            background-color: #0056b3;
+        }
+        /* Custom styles for the footer */
+        .footer-section {
+            background-color: #343a40;
+            color: #fff;
+            padding: 30px 0;
+            text-align: center;
         }
     </style>
-    
-    <!-- Google tag (gtag.js) -->
-<!-- Replace "YOUR_PUBLISHER_ID" with your actual AdSense publisher ID -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-pub-5182857528511838"
-     crossorigin="anonymous"></script>
 </head>
 <body>
 
-    <!--Navigation Section-->
+    <!-- Header Section with Logo -->
+    <header class="header-section">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <!-- Ensure correct path to your logo image -->
+                    <div class="logo">
+                        <img src="img/MJE Logo (4).PNG" alt="MJE IT Logo">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8 mx-auto">
+                    <h1>Professional Technology Assistance</h1>
+                    <p class="lead mt-4 mb-5">
+                        Empowering Success: Over 10,000 Users Served and 2,000 Servers Seamlessly Migrated. Your Professional Services Partner for the Future.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </header>
 
-    <nav class="navbar navbar-expand-md navbar-light bg-white fixed-top sticky-navigation">
-        <a class="navbar-brand mx-auto" href="index.html">
-            <img src="img/MJE Logo (4).PNG" class="img-fluid d-block mx-auto" alt="Google Design"/>
+    <!-- Slider Sections -->
+    <div id="slider" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#slider" data-slide-to="0" class="active"></li>
+            <li data-target="#slider" data-slide-to="1"></li>
+            <li data-target="#slider" data-slide-to="2"></li>
+            <li data-target="#slider" data-slide-to="3"></li>
+        </ol>
+        <div class="carousel-inner">
+
+            <!-- Slide 1: About -->
+            <div class="carousel-item active">
+                <div class="slider-content">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-8 mx-auto">
+                                <h2>About Us</h2>
+                                <p class="lead">
+                                    Learn about our mission, vision, and commitment to delivering exceptional IT services.
+                                </p>
+                                <a href="#" class="btn btn-primary">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2: Courses -->
+            <div class="carousel-item">
+                <div class="slider-content">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-8 mx-auto">
+                                <h2>Our Courses</h2>
+                                <p class="lead">
+                                    Explore our comprehensive courses designed to enhance your IT skills and knowledge.
+                                </p>
+                                <a href="#" class="btn btn-primary">View Courses</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3: Blog -->
+            <div class="carousel-item">
+                <div class="slider-content">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-8 mx-auto">
+                                <h2>Latest from Our Blog</h2>
+                                <p class="lead">
+                                    Read insightful articles, tips, and industry news from our IT experts.
+                                </p>
+                                <a href="#" class="btn btn-primary">Read Blog</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 4: Contact -->
+            <div class="carousel-item">
+                <div class="slider-content">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-8 mx-auto">
+                                <h2>Contact Us</h2>
+                                <p class="lead">
+                                    Get in touch with our team to discuss your IT needs and solutions.
+                                </p>
+                                <a href="#" class="btn btn-primary">Contact Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <a class="carousel-control-prev" href="#slider" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
         </a>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav ml-auto">
-                <!-- Empty list for dropdown button -->
-            </ul>
-        </div>
-        <div class="contact-info">
-            <p>Contact: support@mjeit.com | Phone: Request info</p>
-            <p>Shropshire, Telford, United Kingdom</p>
-        </div>
-        <ul class="social-icons">
-            <li><a href="https://www.linkedin.com/in/mje-it"><i class="fa fa-twitter"></i></a></li>
-            <li class="linkedin" style="margin-left: 10px;"><a href="https://www.linkedin.com/in/mje-it"><i class="fa fa-linkedin"></i></a></li>
-            <!-- Add more social icons as needed -->
-        </ul>
-        <button class="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse"
-                data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-             <!-- Replace with the actual dropdown icon -->
-        </button>
-        <div class="dropdown ml-auto">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <!-- Using the menu icon as before -->
-                <i class="fas fa-bars"></i>
-            </button>
-            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item page-scroll" href="#about">About</a>
-                <a class="dropdown-item page-scroll" href="#services">Services</a>
-                <a class="dropdown-item page-scroll" href="#blog">Blog</a>
-                <a class="dropdown-item" href="#" onclick="scrollToContact()">Work with us</a>
-                <script>
-                    function scrollToContact() {
-                        document.querySelector('#contact').scrollIntoView({
-                            behavior: 'smooth'
-                        });
-                    }
-                </script>
-                
-            </div>
-        </div>
-    </nav>
-    
-
-
-    <!--hero header--> 
-<section class="pt-7 pt-md-8" id="home" style="background-color: black; color: white;">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8 mx-auto my-auto text-center">
-                <h1 style="color: white;">Professional Technology Assistance</h1>
-                <p class="lead mt-4 mb-5">
-                    Empowering Success: Over 10,000 Users Served and 2,000 Servers Seamlessly Migrated. Your Professional Services Partner for the Future.
-                </p>
-            </div>
-        </div>
+        <a class="carousel-control-next" href="#slider" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
     </div>
-</section>
 
-<!-- Banner Section with Sign-Up Form -->
-<section class="banner-section" style="background-color: #f7f7f7; color: #333; text-align: center; padding: 40px 0; margin-top: -30px;">
-    <div class="container">
-        <h2>New Ebook Launch: Start Your IT Start Career Journey</h2>
-        <p>Sign Up Below To Be Notified!</p>
-        <!-- Formspree Sign-Up Form -->
-        <form action="https://formspree.io/f/xayrlqwn" method="POST">
-            <input type="email" name="email" placeholder="Your Email" required>
-            <button type="submit" class="btn btn-primary">Notify Me</button>
-        </form>
-    </div>
-</section>
-
-<!-- about section -->
-<section class="pb-7" id="about" style="margin-top: -120px;">
-    <div class="container">
-        <hr class="my-6"/>
-        <div class="row">
-            <div class="col-md-6 order-md-2 text-left">
-                <h4 class="dot-circle font-weight-normal">Established in 2023
-                    With 15 years of industry experience and a deep understanding of the ever-evolving IT landscape we are committed to equipping you with the knowledge,
-                    skills and resources needed to thrive in the digital era. 
-                </h4>
-            </div>
-            <div class="col-md-6 order-md-1">
-                <img src="img/Design2.png" class="img-fluid d-block mx-auto" alt="Google Design"/>
-            </div>
+    <!-- Footer Section -->
+    <footer class="footer-section">
+        <div class="container">
+            <p>&copy; 2024 MJE IT. All rights reserved.</p>
         </div>
+    </footer>
 
-        <div class="row mt-5">
-            <div class="col-md-6 order-md-1 my-md-auto">
-                <h3>Our Goal</h3>
-                <p class="text-muted lead">
-                    Our mission is to bridge the gap between technology and individuals, enabling them to harness the full potential of IT for personal and professional growth. 
-                </p>
-            </div>
-            <div class="col-md-6 order-md-2">
-                <img src="img/Designer.png" class="img-fluid" alt="Image Description">
-            </div>
-        </div>
-        
-
-    </div>
-</section>
-
-<!--services section-->
-        <section class="bg-light py-7" id="services">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-7 mx-auto">
-                        <h2 class="dot-circle">Services we offer</h2>
-                        <p class="text-muted lead">At MJE IT, we offer a range of comprehensive services designed to cater to the diverse needs of individuals and businesses in the IT landscape. Whether you're looking to upskill your workforce, enhance your IT infrastructure, or seek expert guidance in navigating the digital realm, our services are tailored to empower you to achieve your goals.</p>
-                    </div>
-                </div>
-                <div class="row mt-5">
-                    <div class="col-md-10 mx-auto">
-                        <div class="row card-services">
-                            <div class="col-md-6 mb-3">
-                                <div class="card">
-                                    <div class="card-body text-center">
-                                        <div class="icon-box border-box">
-                                            <div class="icon-box-inner small-xs text-primary">
-                                                <span data-feather="crop" width="30" height="30"></span>
-                                            </div>
-                                        </div>
-                                        <h5 class="mt-0 mb-3">Managed Solutions</h5>
-                                        Navigating modern technology demands precision, security, and innovation. Our expert team offers IT infrastructure management, cloud solutions, and cybersecurity expertise tailored to optimize your technology.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 mb-3">
-                                <div class="card">
-                                    <div class="card-body text-center">
-                                        <div class="icon-box border-box">
-                                            <div class="icon-box-inner small-xs text-primary">
-                                                <span data-feather="monitor" width="30" height="30"></span>
-                                            </div>
-                                        </div>
-                                        <h5 class="mt-0 mb-3">Server Monitoring</h5>
-                                        A robust digital presence relies on reliability, uptime, and peak performance. Our server monitoring solutions empower business owners, IT professionals, and website administrators to maintain control of their digital infrastructure effectively.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 mb-3">
-                                <div class="card">
-                                    <div class="card-body text-center">
-                                        <div class="icon-box border-box">
-                                            <div class="icon-box-inner small-xs text-primary">
-                                                <span data-feather="briefcase" width="30" height="30"></span>
-                                            </div>
-                                        </div>
-                                        <h5 class="mt-0 mb-3">IT Projects</h5>
-                                        Successfully navigating IT projects and migrations demands expertise, precision, and strategic planning. Whether it's a software migration, network upgrade, or system integration, our seasoned professionals offer guidance at every step.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 mb-3">
-                                <div class="card">
-                                    <div class="card-body text-center">
-                                        <div class="icon-box border-box">
-                                            <div class="icon-box-inner small-xs text-primary">
-                                                <span data-feather="smartphone" width="30" height="30"></span>
-                                            </div>
-                                        </div>
-                                        <h5 class="mt-0 mb-3">Device Management</h5>
-                                        Optimize operations with our Device Management solutions. Our strategy fits your unique needs and goals. Whether enhancing business efficiency, team coordination, or personal convenience, our skilled technicians guide you. Experience tailored device management.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 mb-3">
-                                <div class="card">
-                                    <div class="card-body text-center">
-                                        <div class="icon-box border-box">
-                                            <div class="icon-box-inner small-xs text-primary">
-                                                <span data-feather="message-square" width="30" height="30"></span>
-                                            </div>
-                                        </div>
-                                        <h5 class="mt-0 mb-3">Email / 365</h5>
-                                        Optimize communication with our Email/365 solutions. Tailored to your needs, our approach ensures alignment. Whether boosting efficiency, fostering collaboration, or enhancing productivity, our specialists guide you. Embrace personalized digital solutions.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 mb-3">
-                                <div class="card">
-                                    <div class="card-body text-center">
-                                        <div class="icon-box border-box">
-                                            <div class="icon-box-inner small-xs text-primary">
-                                                <span data-feather="headphones" width="30" height="30"></span>
-                                            </div>
-                                        </div>
-                                        <h5 class="mt-0 mb-3">1 - 1 Coaching</h5>
-                                        Discover enriched learning with our customized 1-1 programs. Tailored to your style, pace, and goals, our approach ensures personalized growth. Whether pursuing academic excellence, professional mastery, or personal growth, our instructors support you every step.
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="py-7 bg-light" id="blog">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-10 mx-auto text-center">
-                        <h2 class="dot-circle">Blog</h2>
-                        <p class="text-muted lead">Recent Posts</p>
-                    </div>
-                </div>
-                <div class="row mt-5">
-                    <div class="col-md-6 mb-5">
-                        <div class="card border-0">
-                            <a href="#">
-                                <img class="card-img-top" src="img/Blog Post.png" alt="Blog 1">
-                            </a>
-                            <div class="card-body">
-                                <article>
-                                    <h3 class="mb-3">My 15-Year IT Adventure: The Next Chapter Begins</h3>
-                                    <p class="text-muted">Dear Readers,</p>
-                                    <p>With immense pride and excitement, I announce the dawn of a new era in my IT journey. Having dedicated 15 years to mastering the intricacies of the industry, I stand before you today, ready to embark on the next chapter.</p>
-                                    <p>My extensive experience in the IT realm has honed my skills and expertise to perfection. From navigating complex infrastructure challenges to pioneering innovative solutions, I have consistently delivered results that exceed expectations.</p>
-                                    <p>It is with this confidence and assurance that I unveil the launch of my new website, a testament to my unwavering commitment to excellence. Here, you will find a curated selection of services meticulously crafted to cater to your every IT need.</p>
-                                    <p>My courses and eBooks are not mere resources; they are reflections of my years of industry knowledge and hands-on experience. Backed by my 15-year tenure in IT, they offer unparalleled insights and strategies to propel you towards success.</p>
-                                    <p>I extend a warm invitation to you to join me on this transformative journey. Together, we will navigate the dynamic landscape of IT with confidence, precision, and unwavering determination.</p>
-                                    <p>Thank you for your unwavering support, and here's to the limitless possibilities that lie ahead!</p>
-                                </article>
-                            </div>
-                        </div>
-                    </div>
-        
-                    <div class="col-md-6 mb-5">
-                        <div class="card border-0">
-                            <a href="#">
-                                <img class="card-img-top" src="img/Blog Post2.png" alt="Blog 2">
-                            </a>
-                            <div class="card-body">
-                                <article>
-                                    <h3 class="mb-3">The Benefits of Working with Independent Professional Consultants</h3>
-                                    <p class="text-muted">Collaborating with independent professional consultants can be strategic for businesses seeking specialized expertise, flexibility, and cost-effectiveness.</p>
-                                    <p>Unlike traditional employees, independent consultants offer a unique set of advantages. They bring experience and expertise gained from working with various clients across industries, offering fresh perspectives and innovative solutions to complex challenges.</p>
-                                    <p>Successful collaboration with independent consultants requires careful planning and clear communication. It's essential to establish objectives, timelines, and deliverables upfront to ensure alignment with the organization's goals.</p>
-                                    <p>Effective communication throughout the engagement process is critical. Regular check-ins and status updates help ensure projects stay on track and any issues are addressed promptly.</p>
-                                    <p>In conclusion, working with independent professional consultants can be a valuable asset for businesses looking to leverage expertise, flexibility, and cost-effectiveness. By collaborating with consultants, organizations can tap into knowledge and experience to drive success.</p>
-                                </article>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-<!--contact section-->
-<section id="contact" class="py-7 bg-light">
-    <!-- Contact form content goes here -->
-</section>
-<div style="max-width: 400px; margin: 20px auto; padding: 20px; background: #ffffff; border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
-
-    <h2 style="text-align: center;">Contact Us</h2>
-    
-    <form action="https://formspree.io/f/xayrlqwn" method="POST">
-        <input type="text" name="name" style="width: calc(100% - 20px); padding: 10px; margin: 10px 0; border-radius: 5px; box-sizing: border-box; border: 1px solid #ccc;" placeholder="Your Name" required>
-        <input type="email" name="email" style="width: calc(100% - 20px); padding: 10px; margin: 10px 0; border-radius: 5px; box-sizing: border-box; border: 1px solid #ccc;" placeholder="Your Email" required>
-        <textarea name="message" style="width: calc(100% - 20px); padding: 10px; margin: 10px 0; border-radius: 5px; box-sizing: border-box; resize: vertical; min-height: 100px; border: 1px solid #ccc;" placeholder="Your Message" required></textarea>
-        <button type="submit" style="background: #000000; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;">Submit</button>
-    </form>
-    
-</div>
-
-    
-</section>
-
-
-        <!--footer / contact-->
-        <footer class="py-6 bg-light">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6 mx-auto text-center">
-                        <ul class="list-inline">
-                            <li class="list-inline-item"><a href="#">Privacy</a></li>
-                            <li class="list-inline-item"><a href="#">Terms</a></li>
-                            <li class="list-inline-item"><a href="#">Affiliates</a></li>
-                            <li class="list-inline-item"><a href="#">Support</a></li>
-                            <li class="list-inline-item"><a href="#">Blog</a></li>
-                        </ul>
-                        
-                    </div>
-                </div>
-                <div class="row mt-5">
-                    <div class="col-12 text-muted text-center small-xl">
-                        &copy; 2023 MJEIT - All Rights Reserved
-                    </div>
-                </div>
-            </div>
-        </footer>
-
-        <!--scroll to top-->
-        <div class="scroll-top">
-            <i class="fa fa-angle-up" aria-hidden="true"></i>
-        </div>
-
-        
-
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.5.0/feather.min.js"></script>
-        <script src="js/scripts.js"></script>
-    </body>
+    <!-- jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
