@@ -158,6 +158,8 @@
             <li data-target="#slider" data-slide-to="1"></li>
             <li data-target="#slider" data-slide-to="2"></li>
             <li data-target="#slider" data-slide-to="3"></li>
+            <li data-target="#slider" data-slide-to="4"></li>
+            <li data-target="#slider" data-slide-to="5"></li>
         </ol>
         <div class="carousel-inner">
 
@@ -178,6 +180,23 @@
                 </div>
             </div>
 
+            <!-- Slide 5: Ebook -->
+            <div class="carousel-item">
+                <div class="slider-content">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-8 mx-auto">
+                                <h2>Free Ebook</h2>
+                                <p class="lead">
+                                    Download my free ebook to gain valuable insights and tips on IT best practices.
+                                </p>
+                                <a href="#" class="btn btn-primary" onclick="generateContent('ebook')">Download Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <!-- Slide 2: Courses -->
             <div class="carousel-item">
                 <div class="slider-content">
@@ -189,6 +208,23 @@
                                     Explore my comprehensive courses designed to enhance your IT skills and knowledge.
                                 </p>
                                 <a href="#" class="btn btn-primary" onclick="generateContent('courses')">View Courses</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 6: 1-1 Learning -->
+            <div class="carousel-item">
+                <div class="slider-content">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-8 mx-auto">
+                                <h2>1-1 Learning</h2>
+                                <p class="lead">
+                                    Sign up for personalized 1-1 learning sessions to get tailored support and guidance.
+                                </p>
+                                <a href="#" class="btn btn-primary" onclick="generateContent('1-1learning')">Sign Up</a>
                             </div>
                         </div>
                     </div>
@@ -228,139 +264,181 @@
                     </div>
                 </div>
             </div>
-
         </div>
-        <a class="carousel-control-prev" href="#slider" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#slider" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
-    </div>
 
-    <!-- Content Section -->
-    <div id="content-section" class="content-section">
-        <div class="container">
-            <div id="dynamic-content" class="row">
-                <!-- Dynamic content will be inserted here -->
-            </div>
+    </div>
+    <a class="carousel-control-prev" href="#slider" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#slider" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+
+<!-- Content Section -->
+<div id="content-section" class="content-section">
+    <div class="container">
+        <div id="dynamic-content" class="row">
+            <!-- Dynamic content will be inserted here -->
         </div>
     </div>
+</div>
 
-    <!-- Back to Top Button -->
-    <div class="btn-top" id="btn-top" onclick="scrollToTop()">
-        <i class="fas fa-arrow-up"></i>
+<!-- Back to Top Button -->
+<div class="btn-top" id="btn-top" onclick="scrollToTop()">
+    <i class="fas fa-arrow-up"></i>
+</div>
+
+<!-- Footer Section -->
+<footer class="footer-section">
+    <div class="container">
+        <p>&copy; 2024 MJE IT. All rights reserved.</p>
     </div>
+</footer>
 
-    <!-- Footer Section -->
-    <footer class="footer-section">
-        <div class="container">
-            <p>&copy; 2024 MJE IT. All rights reserved.</p>
-        </div>
-    </footer>
+<!-- jQuery and Bootstrap Bundle (includes Popper) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
 
-    <!-- jQuery and Bootstrap Bundle (includes Popper) -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+<!-- Custom JavaScript -->
+<script>
+    // Function to generate content based on slider click
+    function generateContent(section) {
+        var dynamicContent = document.getElementById('dynamic-content');
+        dynamicContent.innerHTML = ''; // Clear previous content
 
-    <!-- Custom JavaScript -->
-    <script>
-        // Function to generate content based on slider click
-        function generateContent(section) {
-            var dynamicContent = document.getElementById('dynamic-content');
-            dynamicContent.innerHTML = ''; // Clear previous content
-
-            if (section === 'about') {
-                dynamicContent.innerHTML = `
-                    <div class="col-md-8 mx-auto">
-                        <h2>About Me</h2>
-                        <p class="lead">
-                            I am dedicated to providing professional technology assistance to businesses and individuals. My mission is to empower success through innovative solutions and exceptional service.
-                        </p>
-                        <p>
-                            With over a decade of experience, I have successfully served numerous clients and completed various projects. Whether you need IT consulting, cloud solutions, or cybersecurity services, I am here to assist you.
-                        </p>
-                    </div>
-                `;
-            } else if (section === 'courses') {
-                dynamicContent.innerHTML = `
-                    <div class="col-md-8 mx-auto">
-                        <h2>My Courses</h2>
-                        <h3>Explore My Comprehensive Courses</h3>
-                        <p>
-                            I offer a wide range of courses designed to enhance your IT skills and knowledge. Whether you're looking to learn programming languages, master cloud computing, or delve into cybersecurity, my courses are tailored to meet your professional development goals.
-                        </p>
-                        <ul>
-                            <li>Programming Languages: Java, Python, JavaScript</li>
-                            <li>Cloud Computing: AWS, Azure, Google Cloud</li>
-                            <li>Cybersecurity Essentials</li>
-                            <li>Networking Fundamentals</li>
-                        </ul>
-                        <p>
-                            Join me and many others who have benefited from my expert-led training programs. Enroll today and take your career to new heights.
-                        </p>
-                    </div>
-                `;
-            } else if (section === 'blog') {
-                dynamicContent.innerHTML = `
-                    <div class="col-md-8 mx-auto">
-                        <h2>Latest from My Blog</h2>
-                        <h3>Stay Informed with My Insights</h3>
-                        <p>
-                            My blog offers insightful articles, tips, and industry news to keep you updated on the latest trends in technology. Whether you're interested in AI innovations, cybersecurity threats, or IT best practices, I provide valuable information to help you stay ahead.
-                        </p>
-                        <p>
-                            Explore my blog posts and discover how I can help you navigate the evolving landscape of technology.
-                        </p>
-                    </div>
-                `;
-            } else if (section === 'contact') {
-                dynamicContent.innerHTML = `
-                    <div class="col-md-8 mx-auto">
-                        <h2>Contact Me</h2>
-                        <h3>Get in Touch</h3>
-                        <p>
-                            Have questions or ready to get started on your next IT project? Contact me today to discuss your needs and solutions. I am here to assist you every step of the way.
-                        </p>
-                        <form action="https://formspree.io/f/{your-formspree-id}" method="POST">
-                            <div class="form-group">
-                                <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
-                            </div>
-                            <div class="form-group">
-                                <input type="email" class="form-control" id="email" name="_replyto" placeholder="Your Email" required>
-                            </div>
-                            <div class="form-group">
-                                <textarea class="form-control" id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary">Send Message</button>
-                        </form>
-                    </div>
-                `;
-            }
-
-            // Scroll to the content section after generating dynamic content
-            document.getElementById('content-section').scrollIntoView({ behavior: 'smooth' });
+        if (section === 'about') {
+            dynamicContent.innerHTML = `
+                <div class="col-md-8 mx-auto">
+                    <h2>About Me</h2>
+                    <p class="lead">
+                        I am dedicated to providing professional technology assistance to businesses and individuals. My mission is to empower success through innovative solutions and exceptional service.
+                    </p>
+                    <p>
+                        With over a decade of experience, I have successfully served numerous clients and completed various projects. Whether you need IT consulting, cloud solutions, or cybersecurity services, I am here to assist you.
+                    </p>
+                </div>
+            `;
+        } else if (section === 'courses') {
+            dynamicContent.innerHTML = `
+                <div class="col-md-8 mx-auto">
+                    <h2>My Courses</h2>
+                    <h3>Explore My Comprehensive Courses</h3>
+                    <p>
+                        I offer a wide range of courses designed to enhance your IT skills and knowledge. Whether you're looking to learn programming languages, master cloud computing, or delve into cybersecurity, my courses are tailored to meet your professional development goals.
+                    </p>
+                    <ul>
+                        <li>Programming Languages: Java, Python, JavaScript</li>
+                        <li>Cloud Computing: AWS, Azure, Google Cloud</li>
+                        <li>Cybersecurity Essentials</li>
+                        <li>Networking Fundamentals</li>
+                    </ul>
+                    <p>
+                        Join me and many others who have benefited from my expert-led training programs. Enroll today and take your career to new heights.
+                    </p>
+                </div>
+            `;
+        } else if (section === 'blog') {
+            dynamicContent.innerHTML = `
+                <div class="col-md-8 mx-auto">
+                    <h2>Latest from My Blog</h2>
+                    <h3>Stay Informed with My Insights</h3>
+                    <p>
+                        My blog offers insightful articles, tips, and industry news to keep you updated on the latest trends in technology. Whether you're interested in AI innovations, cybersecurity threats, or IT best practices, I provide valuable information to help you stay ahead.
+                    </p>
+                    <p>
+                        Explore my blog posts and discover how I can help you navigate the evolving landscape of technology.
+                    </p>
+                </div>
+            `;
+        } else if (section === 'contact') {
+            dynamicContent.innerHTML = `
+                <div class="col-md-8 mx-auto">
+                    <h2>Contact Me</h2>
+                    <h3>Get in Touch</h3>
+                    <p>
+                        Have questions or ready to get started on your next IT project? Contact me today to discuss your needs and solutions. I am here to assist you every step of the way.
+                    </p>
+                    <form action="https://formspree.io/f/{your-formspree-id}" method="POST">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="email" name="_replyto" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            `;
+        } else if (section === 'ebook') {
+            dynamicContent.innerHTML = `
+                <div class="col-md-8 mx-auto">
+                    <h2>Free Ebook</h2>
+                    <h3>Get Your Copy Today</h3>
+                    <p>
+                        Download my free ebook to gain valuable insights and tips on IT best practices. This comprehensive guide covers various topics including cloud computing, cybersecurity, and effective IT management strategies.
+                    </p>
+                    <form action="/download-ebook" method="POST">
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Download Now</button>
+                    </form>
+                </div>
+            `;
+        } else if (section === '1-1learning') {
+            dynamicContent.innerHTML = `
+                <div class="col-md-8 mx-auto">
+                    <h2>1-1 Learning</h2>
+                    <h3>Personalized Learning Sessions</h3>
+                    <p>
+                        Sign up for personalized 1-1 learning sessions to receive tailored support and guidance. Whether you're a beginner or looking to advance your skills, I provide customized training to meet your needs.
+                    </p>
+                    <p>
+                        Schedule a session today and take the next step in your IT journey.
+                    </p>
+                    <form action="/schedule-1-1" method="POST">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="date" class="form-control" id="date" name="date" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Schedule Now</button>
+                    </form>
+                </div>
+            `;
         }
 
-        // Function to scroll to top
-        function scrollToTop() {
-            document.body.scrollTop = 0; // For Safari
-            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-        }
+        // Scroll to the content section after generating dynamic content
+        document.getElementById('content-section').scrollIntoView({ behavior: 'smooth' });
+    }
 
-        // Show or hide back to top button based on scroll position
-        window.onscroll = function() { scrollFunction() };
+    // Function to scroll to top
+    function scrollToTop() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
 
-        function scrollFunction() {
-            var btnTop = document.getElementById("btn-top");
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                btnTop.style.display = "flex";
-            } else {
-                btnTop.style.display = "none";
-            }
+    // Show or hide back to top button based on scroll position
+    window.onscroll = function() { scrollFunction() };
+
+    function scrollFunction() {
+        var btnTop = document.getElementById("btn-top");
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            btnTop.style.display = "flex";
+        } else {
+            btnTop.style.display = "none";
         }
-    </script>
+    }
+</script>
 </body>
 </html>
