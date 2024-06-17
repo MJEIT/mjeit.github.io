@@ -50,23 +50,23 @@
             line-height: 1.6;
         }
         .slider-content .btn-primary {
-            background-color: #007bff;
-            border-color: #007bff;
+            background-color: #000;
+            border-color: #000;
             margin-top: 20px;
         }
         .slider-content .btn-primary:hover {
-            background-color: #0056b3;
-            border-color: #0056b3;
+            background-color: #333;
+            border-color: #333;
         }
         /* Custom styles for the carousel indicators */
         .carousel-indicators {
             bottom: 10px;
         }
         .carousel-indicators li {
-            background-color: #007bff;
+            background-color: #000;
         }
         .carousel-indicators .active {
-            background-color: #0056b3;
+            background-color: #333;
         }
         /* Custom styles for the footer */
         .footer-section {
@@ -74,6 +74,11 @@
             color: #fff;
             padding: 30px 0;
             text-align: center;
+        }
+        /* Styles for the content section */
+        .content-section {
+            padding: 50px 0;
+            background-color: #fff;
         }
     </style>
 </head>
@@ -121,7 +126,7 @@
                                 <p class="lead">
                                     Learn about our mission, vision, and commitment to delivering exceptional IT services.
                                 </p>
-                                <a href="#" class="btn btn-primary">Learn More</a>
+                                <a href="#" class="btn btn-primary" onclick="generateContent(event, 'about')">Learn More</a>
                             </div>
                         </div>
                     </div>
@@ -138,7 +143,7 @@
                                 <p class="lead">
                                     Explore our comprehensive courses designed to enhance your IT skills and knowledge.
                                 </p>
-                                <a href="#" class="btn btn-primary">View Courses</a>
+                                <a href="#" class="btn btn-primary" onclick="generateContent(event, 'courses')">View Courses</a>
                             </div>
                         </div>
                     </div>
@@ -155,7 +160,7 @@
                                 <p class="lead">
                                     Read insightful articles, tips, and industry news from our IT experts.
                                 </p>
-                                <a href="#" class="btn btn-primary">Read Blog</a>
+                                <a href="#" class="btn btn-primary" onclick="generateContent(event, 'blog')">Read Blog</a>
                             </div>
                         </div>
                     </div>
@@ -172,7 +177,7 @@
                                 <p class="lead">
                                     Get in touch with our team to discuss your IT needs and solutions.
                                 </p>
-                                <a href="#" class="btn btn-primary">Contact Now</a>
+                                <a href="#" class="btn btn-primary" onclick="generateContent(event, 'contact')">Contact Now</a>
                             </div>
                         </div>
                     </div>
@@ -190,6 +195,16 @@
         </a>
     </div>
 
+    <!-- Content Section -->
+    <div id="content-section" class="content-section">
+        <div class="container">
+            <div id="dynamic-content"
+            <div id="dynamic-content" class="row">
+                <!-- Dynamic content will be inserted here -->
+            </div>
+        </div>
+    </div>
+
     <!-- Footer Section -->
     <footer class="footer-section">
         <div class="container">
@@ -200,5 +215,57 @@
     <!-- jQuery and Bootstrap Bundle (includes Popper) -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script>
+        function generateContent(event, section) {
+            event.preventDefault(); // Prevent the default anchor behavior
+            let content = '';
+
+            switch(section) {
+                case 'about':
+                    content = `
+                        <div id="about-content" class="col-md-12">
+                            <h2>About Us</h2>
+                            <p>Learn about our mission, vision, and commitment to delivering exceptional IT services.</p>
+                            <p>We strive to provide top-notch IT solutions to our clients, helping them achieve their goals efficiently and effectively.</p>
+                        </div>
+                    `;
+                    break;
+                case 'courses':
+                    content = `
+                        <div id="courses-content" class="col-md-12">
+                            <h2>Our Courses</h2>
+                            <p>Explore our comprehensive courses designed to enhance your IT skills and knowledge.</p>
+                            <p>From beginner to advanced levels, we offer courses that cover a wide range of IT topics.</p>
+                        </div>
+                    `;
+                    break;
+                case 'blog':
+                    content = `
+                        <div id="blog-content" class="col-md-12">
+                            <h2>Latest from Our Blog</h2>
+                            <p>Read insightful articles, tips, and industry news from our IT experts.</p>
+                            <p>Stay updated with the latest trends and best practices in the IT industry.</p>
+                        </div>
+                    `;
+                    break;
+                case 'contact':
+                    content = `
+                        <div id="contact-content" class="col-md-12">
+                            <h2>Contact Us</h2>
+                            <p>Get in touch with our team to discuss your IT needs and solutions.</p>
+                            <p>We are here to help you with any questions or concerns you may have.</p>
+                        </div>
+                    `;
+                    break;
+            }
+
+            document.getElementById('dynamic-content').innerHTML = content;
+            
+            // Scroll to the new content
+            document.getElementById('dynamic-content').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
 </body>
 </html>
