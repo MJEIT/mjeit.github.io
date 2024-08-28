@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IT Services - MJE IT</title>
-    <meta name="description" content="IT Services provided by MJE IT.">
+    <title>IT Services | MJE IT</title>
+    <meta name="description" content="Explore our comprehensive IT services designed to meet all your technology needs.">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <!-- Font Awesome -->
@@ -13,64 +13,141 @@
     <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&display=swap" rel="stylesheet">
     <!-- Custom CSS -->
     <style>
-        /* Custom styles for the header section */
+        /* General body styling */
+        body {
+            font-family: 'Arimo', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navigation Bar */
+        .navbar-custom {
+            background: rgba(255, 255, 255, 0.9); /* Translucent background */
+            border-bottom: 1px solid #ddd; /* Soft border */
+            padding: 15px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: background 0.3s ease;
+        }
+        .navbar-custom .navbar-brand img {
+            max-height: 60px;
+        }
+        .navbar-custom .navbar-nav .nav-link {
+            color: #333;
+            margin-left: 20px;
+            font-weight: 500;
+            font-size: 1.1rem;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        .navbar-custom .navbar-nav .nav-link::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            height: 2px;
+            width: 0;
+            background: #28a745; /* Green underline */
+            transition: width 0.3s ease;
+        }
+        .navbar-custom .navbar-nav .nav-link:hover::after {
+            width: 100%;
+        }
+        .navbar-custom .navbar-nav .nav-item.dropdown .dropdown-menu {
+            background: #fff;
+            border: 1px solid #ddd;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .navbar-custom .navbar-nav .nav-item.dropdown .dropdown-menu .dropdown-item {
+            color: #333;
+            font-size: 1rem;
+        }
+        .navbar-custom .navbar-nav .nav-item.dropdown .dropdown-menu .dropdown-item:hover {
+            background: #f8f9fa;
+        }
+
+        /* Header Section */
         .header-section {
             background-color: #000;
             color: #fff;
-            padding-top: 20px;
-            padding-bottom: 20px;
+            padding: 60px 20px;
             text-align: center;
         }
         .header-section h1 {
-            font-size: 3rem;
+            font-size: 3.5rem;
             font-weight: bold;
             margin-bottom: 20px;
         }
         .header-section p {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             line-height: 1.6;
         }
 
-        /* Styles for the navigation bar */
-        .navbar-custom {
+        /* IT Services Section */
+        .services-section {
+            padding: 60px 20px;
             background-color: #fff;
         }
-        .navbar-custom .navbar-brand img {
-            max-height: 50px;
-        }
-        .navbar-custom .navbar-nav .nav-link {
-            color: #000;
-            margin-left: 20px;
-            font-weight: bold;
-        }
-        .navbar-custom .navbar-nav .nav-link:hover {
-            color: #555;
-        }
-
-        /* Custom styles for the content section */
-        .content-section {
-            padding: 50px 0;
-            background-color: #fff;
-        }
-        .content-section h2 {
-            color: #000;
+        .services-section h2 {
             font-size: 2.5rem;
-            font-weight: bold;
-            margin-bottom: 20px;
+            font-weight: 700;
+            margin-bottom: 30px;
+            text-align: center;
         }
-        .content-section p {
-            color: #555;
+        .service-item {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .service-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .service-item h3 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+        .service-item p {
             font-size: 1rem;
-            line-height: 1.7;
-            margin-bottom: 15px;
+            color: #555;
+        }
+        .service-item i {
+            font-size: 2rem;
+            color: #28a745;
+            margin-bottom: 10px;
         }
 
-        /* Custom styles for the footer section */
+        /* Footer Section */
         .footer-section {
             background-color: #343a40;
             color: #fff;
             padding: 30px 0;
             text-align: center;
+        }
+
+        /* Scroll to Top Button */
+        .btn-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: none;
+            background-color: #000;
+            color: #fff;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        .btn-top:hover {
+            background-color: #333;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -83,17 +160,16 @@
                 <img src="img/MJE Logo (2).png" alt="MJE IT Logo">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"><i class="fas fa-bars" style="color:#000;"></i></span>
+                <span class="navbar-toggler-icon"><i class="fas fa-bars" style="color:#333;"></i></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"><a class="nav-link" href="ebook.html">Ebooks</a></li>
-                    <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
-                    <li class="nav-item"><a class="nav-link" href="1-1learning.html">1-1 Learning</a></li>
-                    <li class="nav-item"><a class="nav-link" href="itservices.html">IT Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="store.html">Store</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="ebook.html"><i class="fas fa-book"></i> Ebooks</a></li>
+                    <li class="nav-item"><a class="nav-link" href="courses.html"><i class="fas fa-chalkboard-teacher"></i> Courses</a></li>
+                    <li class="nav-item"><a class="nav-link" href="1-1learning.html"><i class="fas fa-user-graduate"></i> 1-1 Learning</a></li>
+                    <li class="nav-item"><a class="nav-link" href="itservices.html"><i class="fas fa-laptop"></i> IT Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="store.html"><i class="fas fa-store"></i> Store</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
                 </ul>
             </div>
         </div>
@@ -102,29 +178,59 @@
     <!-- Header Section -->
     <header class="header-section">
         <div class="container">
-            <div class="row">
-                <div class="col-md-8 mx-auto">
-                    <h1>IT Services</h1>
-                    <p class="lead mt-4 mb-5">
-                        Discover our comprehensive IT services designed to meet your business needs.
-                    </p>
-                </div>
-            </div>
+            <h1>Our IT Services</h1>
+            <p>Discover the range of IT services we offer to support your technology needs and ensure smooth operations.</p>
         </div>
     </header>
 
-    <!-- Content Section -->
-    <section class="content-section">
+    <!-- IT Services Section -->
+    <section class="services-section">
         <div class="container">
-            <h2>Our IT Services</h2>
-            <p>At MJE IT, we offer a wide range of IT services tailored to support your business operations and enhance your technological capabilities. Our expert team is dedicated to providing top-notch solutions to help you achieve your IT goals.</p>
-            <ul>
-                <li><strong>Network Setup and Management</strong> - Design, implement, and manage your network infrastructure for optimal performance and security.</li>
-                <li><strong>IT Support and Maintenance</strong> - Provide ongoing technical support and maintenance to ensure your systems run smoothly and efficiently.</li>
-                <li><strong>Cybersecurity Solutions</strong> - Implement robust security measures to protect your data and network from threats.</li>
-                <li><strong>Cloud Services</strong> - Utilize cloud-based solutions for scalable and flexible IT infrastructure.</li>
-                <li><strong>IT Consulting</strong> - Offer expert advice and strategies to optimize your IT operations and achieve business objectives.</li>
-            </ul>
+            <h2>Our Services</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="service-item">
+                        <i class="fas fa-cogs"></i>
+                        <h3>IT Consulting</h3>
+                        <p>Expert advice and solutions tailored to optimize your IT strategy and infrastructure.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-item">
+                        <i class="fas fa-wrench"></i>
+                        <h3>Technical Support</h3>
+                        <p>Reliable support services to resolve technical issues and ensure your systems run smoothly.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-item">
+                        <i class="fas fa-cloud"></i>
+                        <h3>Cloud Services</h3>
+                        <p>Comprehensive cloud solutions including storage, backup, and computing services.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-item">
+                        <i class="fas fa-lock"></i>
+                        <h3>Cybersecurity</h3>
+                        <p>Advanced security measures to protect your data and systems from cyber threats.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-item">
+                        <i class="fas fa-network-wired"></i>
+                        <h3>Network Solutions</h3>
+                        <p>Design and implementation of efficient and secure network infrastructures.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-item">
+                        <i class="fas fa-server"></i>
+                        <h3>Server Management</h3>
+                        <p>End-to-end server management to ensure high performance and reliability.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -135,10 +241,29 @@
         </div>
     </footer>
 
+    <!-- Scroll to Top Button -->
+    <div class="btn-top"><i class="fas fa-arrow-up"></i></div>
+
     <!-- Bootstrap JS, Popper.js, and jQuery -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    
+
+    <!-- Custom JavaScript -->
+    <script>
+        // Scroll to top button
+        var btnTop = document.querySelector('.btn-top');
+        window.onscroll = function() {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                btnTop.style.display = 'flex';
+            } else {
+                btnTop.style.display = 'none';
+            }
+        };
+        btnTop.addEventListener('click', function() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        });
+    </script>
 </body>
 </html>
