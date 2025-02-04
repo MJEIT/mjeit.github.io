@@ -54,6 +54,35 @@
         .navbar-custom .navbar-nav .nav-link:hover::after {
             width: 100%;
         }
+        .navbar-custom .navbar-nav .nav-item.dropdown .dropdown-menu {
+            background: #fff;
+            border: 1px solid #ddd;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .navbar-custom .navbar-nav .nav-item.dropdown .dropdown-menu .dropdown-item {
+            color: #333;
+            font-size: 1rem;
+        }
+        .navbar-custom .navbar-nav .nav-item.dropdown .dropdown-menu .dropdown-item:hover {
+            background: #f8f9fa;
+        }
+/* Reduce padding in navbar */
+.navbar-custom {
+    padding-top: 10px; /* Adjust top padding */
+    padding-bottom: 5px; /* Adjust bottom padding */
+}
+
+/* Reduce space around navbar items */
+.navbar-nav .nav-item {
+    margin-top: 0;
+    margin-bottom: 0; /* Remove margins between nav items */
+}
+
+/* Reduce padding in navbar links */
+.navbar-nav .nav-link {
+    padding-top: 5px; /* Adjust top padding */
+    padding-bottom: 5px; /* Adjust bottom padding */
+}
 
         /* Header Section */
         .header-section {
@@ -151,22 +180,21 @@
 </head>
 <body>
 
-    <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-custom">
+     <!-- Navigation Bar -->
+     <nav class="navbar navbar-expand-lg navbar-custom">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <img src="img/MJE Logo (4).PNG" alt="MJE IT Logo">
+                <img src="img/MJE Logo (9).PNG" alt="MJE IT Logo">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"><i class="fas fa-bars" style="color:#333;"></i></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="1-1learning.html"><i class="fas fa-user-graduate"></i> 1-1 Learning</a></li>
                     <li class="nav-item"><a class="nav-link" href="ebook.html"><i class="fas fa-book"></i> Ebooks</a></li>
                     <li class="nav-item"><a class="nav-link" href="courses.html"><i class="fas fa-chalkboard-teacher"></i> Courses</a></li>
-                    <li class="nav-item"><a class="nav-link" href="1-1learning.html"><i class="fas fa-user-graduate"></i> 1-1 Learning</a></li>
                     <li class="nav-item"><a class="nav-link" href="itservices.html"><i class="fas fa-laptop"></i> IT Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="store.html"><i class="fas fa-store"></i> Store</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
                 </ul>
             </div>

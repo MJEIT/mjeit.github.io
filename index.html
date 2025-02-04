@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MJE IT</title>
+    <!-- Site Icon (Favicon) -->
+    <link rel="icon" href="img\MJE Logo (3).png" type="image/png">
     <meta name="description" content="Professional IT Services.">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -66,6 +68,23 @@
         .navbar-custom .navbar-nav .nav-item.dropdown .dropdown-menu .dropdown-item:hover {
             background: #f8f9fa;
         }
+/* Reduce padding in navbar */
+.navbar-custom {
+    padding-top: 10px; /* Adjust top padding */
+    padding-bottom: 5px; /* Adjust bottom padding */
+}
+
+/* Reduce space around navbar items */
+.navbar-nav .nav-item {
+    margin-top: 0;
+    margin-bottom: 0; /* Remove margins between nav items */
+}
+
+/* Reduce padding in navbar links */
+.navbar-nav .nav-link {
+    padding-top: 5px; /* Adjust top padding */
+    padding-bottom: 5px; /* Adjust bottom padding */
+}
 
         /* Header Section */
         .header-section {
@@ -198,18 +217,17 @@
     <nav class="navbar navbar-expand-lg navbar-custom">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <img src="img/MJE Logo (4).PNG" alt="MJE IT Logo">
+                <img src="img/MJE Logo (9).PNG" alt="MJE IT Logo">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"><i class="fas fa-bars" style="color:#333;"></i></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="1-1learning.html"><i class="fas fa-user-graduate"></i> 1-1 Learning</a></li>
                     <li class="nav-item"><a class="nav-link" href="ebook.html"><i class="fas fa-book"></i> Ebooks</a></li>
                     <li class="nav-item"><a class="nav-link" href="courses.html"><i class="fas fa-chalkboard-teacher"></i> Courses</a></li>
-                    <li class="nav-item"><a class="nav-link" href="1-1learning.html"><i class="fas fa-user-graduate"></i> 1-1 Learning</a></li>
                     <li class="nav-item"><a class="nav-link" href="itservices.html"><i class="fas fa-laptop"></i> IT Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="store.html"><i class="fas fa-store"></i> Store</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
                 </ul>
             </div>
@@ -221,36 +239,35 @@
         <div class="container">
             <h1>Professional Technology Assistance</h1>
             <p>
-                Your Gateway to 15 Years of Expertise in IT Services, Ebooks, and Learning.
+                Your Gateway to 16 Years of Expertise in IT Services.
             </p>
         </div>
     </header>
 
-    <!-- Content Section -->
-    <section class="content-section">
-        <div class="container content-layout">
-            <div class="content-block">
-                <h2>Mission</h2>
-                <div class="divider"></div>
-                <p>At MJE IT, We are dedicated to providing top-notch IT services, innovative educational resources, and personalized learning experiences. Our goal is to support your technology needs and help you achieve your professional objectives.</p>
+   <!-- Content Section -->
+<section class="content-section">
+    <div class="container content-layout">
+        <div class="row">
+            <!-- First Content Block (Mission) -->
+            <div class="col-md-6">
+                <div class="content-block">
+                    <h2>Mission</h2>
+                    <div class="divider"></div>
+                    <p>We are dedicated to providing top-notch IT services, innovative educational resources and personalized learning experiences. Our goal is to support your technology needs and help you achieve your professional objectives.</p>
+                </div>
             </div>
-            <div class="content-block">
-                <h2>Why Choose Us?</h2>
-                <div class="divider"></div>
-                <p>With decades of experience, we offer unparalleled expertise in IT services, a comprehensive range of educational materials, and tailored learning solutions. We prioritize your needs and deliver exceptional value in everything we do.</p>
+            <!-- Second Content Block (Why Choose Us) -->
+            <div class="col-md-6">
+                <div class="content-block">
+                    <h2>Why Choose Us?</h2>
+                    <div class="divider"></div>
+                    <p>With decades of experience we offer expertise in IT services, a comprehensive range of educational materials and tailored learning solutions. We prioritize your needs and deliver exceptional value in everything we do.</p>
+                </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- IT Services Section -->
-    <section class="content-section">
-        <div class="container content-layout">
-            <div class="content-block">
-                <h2>IT Services</h2>
-                <p>At MJE IT, we offer a range of comprehensive services designed to cater to the diverse needs of individuals and businesses in the IT landscape. Whether you're looking to upskill your workforce, enhance your IT infrastructure, or seek expert guidance in navigating the digital realm, our services are tailored to empower you to achieve your goals.</p>
-            </div>
-        </div>
-    </section>
 
     <!-- Services Grid -->
     <section class="services-grid">
@@ -272,9 +289,9 @@
                 </div>
                 <div class="col-md-4">
                     <div class="service-box">
-                        <i class="fas fa-laptop-code fa-3x"></i>
-                        <h4>Server Monitoring</h4>
-                        <p>Ensure seamless operations with real-time monitoring and insights.</p>
+                        <i class="fas fa-user-tie fa-3x"></i>
+                        <h4>Mentoring</h4>
+                        <p>Personalized tutoring sessions designed to help you master conceptse.</p>
                     </div>
                 </div>
             </div>
@@ -288,9 +305,9 @@
                 </div>
                 <div class="col-md-4">
                     <div class="service-box">
-                        <i class="fas fa-project-diagram fa-3x"></i>
-                        <h4>IT Consulting</h4>
-                        <p>Expert advice to guide your business through the digital landscape.</p>
+                        <i class="fas fa-laptop-code fa-3x"></i>
+                        <h4>Server Monitoring</h4>
+                        <p>Ensure seamless operations with real-time monitoring and insights.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -311,20 +328,11 @@
                 </div>
                 <div class="col-md-4">
                     <div class="service-box">
-                        <i class="fas fa-network-wired fa-3x"></i>
-                        <h4>Network Management</h4>
-                        <p>Reliable network solutions to keep your business connected and running smoothly.</p>
+                        <i class="fas fa-project-diagram fa-3x"></i>
+                        <h4>IT Consulting</h4>
+                        <p>Expert advice to guide your business through the digital landscape.</p>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="service-box">
-                        <i class="fas fa-database fa-3x"></i>
-                        <h4>Data Management</h4>
-                        <p>Secure and efficient data handling to support your business operations.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
                 <div class="col-md-4">
                     <div class="service-box">
                         <i class="fas fa-cogs fa-3x"></i>
