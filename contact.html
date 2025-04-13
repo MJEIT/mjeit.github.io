@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | MJE IT</title>
-    <meta name="description" content="Get in touch with us for any inquiries or support.">
+    <title>MJE IT</title>
+    <!-- Site Icon (Favicon) -->
+    <link rel="icon" href="img\MJE Logo (3).png" type="image/png">
+    <meta name="description" content="Professional IT Services.">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <!-- Font Awesome -->
@@ -54,6 +56,35 @@
         .navbar-custom .navbar-nav .nav-link:hover::after {
             width: 100%;
         }
+        .navbar-custom .navbar-nav .nav-item.dropdown .dropdown-menu {
+            background: #fff;
+            border: 1px solid #ddd;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .navbar-custom .navbar-nav .nav-item.dropdown .dropdown-menu .dropdown-item {
+            color: #333;
+            font-size: 1rem;
+        }
+        .navbar-custom .navbar-nav .nav-item.dropdown .dropdown-menu .dropdown-item:hover {
+            background: #f8f9fa;
+        }
+/* Reduce padding in navbar */
+.navbar-custom {
+    padding-top: 10px; /* Adjust top padding */
+    padding-bottom: 5px; /* Adjust bottom padding */
+}
+
+/* Reduce space around navbar items */
+.navbar-nav .nav-item {
+    margin-top: 0;
+    margin-bottom: 0; /* Remove margins between nav items */
+}
+
+/* Reduce padding in navbar links */
+.navbar-nav .nav-link {
+    padding-top: 5px; /* Adjust top padding */
+    padding-bottom: 5px; /* Adjust bottom padding */
+}
 
         /* Header Section */
         .header-section {
@@ -155,18 +186,17 @@
     <nav class="navbar navbar-expand-lg navbar-custom">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <img src="img/MJE Logo (4).PNG" alt="MJE IT Logo">
+                <img src="img/MJE Logo (9).png" alt="MJE IT Logo">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"><i class="fas fa-bars" style="color:#333;"></i></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="1-1learning.html"><i class="fas fa-user-graduate"></i> 1-1 Learning</a></li>
                     <li class="nav-item"><a class="nav-link" href="ebook.html"><i class="fas fa-book"></i> Ebooks</a></li>
                     <li class="nav-item"><a class="nav-link" href="courses.html"><i class="fas fa-chalkboard-teacher"></i> Courses</a></li>
-                    <li class="nav-item"><a class="nav-link" href="1-1learning.html"><i class="fas fa-user-graduate"></i> 1-1 Learning</a></li>
                     <li class="nav-item"><a class="nav-link" href="itservices.html"><i class="fas fa-laptop"></i> IT Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="store.html"><i class="fas fa-store"></i> Store</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
                 </ul>
             </div>
@@ -176,26 +206,59 @@
     <!-- Header Section -->
     <header class="header-section">
         <div class="container">
-            <h1>Contact Us</h1>
-            <p>We’d love to hear from you. Fill out the form below to get in touch with us.</p>
+            <h1>Contact</h1>
+            <p>Drop us a line below.</p>
+            <a href="https://www.linkedin.com/in/yourprofile" target="_blank">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="https://twitter.com/yourprofile" target="_blank">
+                <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a href="https://yourprofile.substack.com" target="_blank">
+                <i class="fa-solid fa-newspaper"></i>
+            </a>
         </div>
     </header>
 
     <!-- Contact Section -->
-    <section class="contact-section">
-        <div class="container">
-            <h2>Send Us a Message</h2>
-            <form class="contact-form" action="https://formspree.io/f/xqaznbga" method="POST">
-                <label for="email">Your email:</label>
-                <input type="email" id="email" name="email" required>
-                
-                <label for="message">Your message:</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
-                
-                <button type="submit">Send</button>
-            </form>
-        </div>
-    </section>
+<section class="contact-section">
+    <div class="container">
+       
+        
+
+        
+        <form class="contact-form" action="https://formspree.io/f/xqaznbga" method="POST">
+            <label for="email">Your email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Your message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            
+            <button type="submit">Send</button>
+        </form>
+    </div>
+</section>
+
+<!-- Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+<!-- Optional CSS for styling -->
+<style>
+    .social-links {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .social-links a {
+        font-size: 24px;
+        margin: 0 10px;
+        color: #333;
+        text-decoration: none;
+    }
+    .social-links a:hover {
+        color: #0077b5; /* LinkedIn color as an example */
+    }
+</style>
+
 
     <!-- Footer Section -->
     <footer class="footer-section">

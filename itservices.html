@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IT Services | MJE IT</title>
-    <meta name="description" content="Explore our comprehensive IT services designed to meet all your technology needs.">
+    <title>MJE IT</title>
+    <!-- Site Icon (Favicon) -->
+    <link rel="icon" href="img\MJE Logo (3).png" type="image/png">
+    <meta name="description" content="Professional IT Services.">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <!-- Font Awesome -->
@@ -22,8 +24,8 @@
             padding: 0;
         }
 
-        /* Navigation Bar */
-        .navbar-custom {
+       /* Navigation Bar */
+       .navbar-custom {
             background: rgba(255, 255, 255, 0.9); /* Translucent background */
             border-bottom: 1px solid #ddd; /* Soft border */
             padding: 15px 0;
@@ -66,6 +68,23 @@
         .navbar-custom .navbar-nav .nav-item.dropdown .dropdown-menu .dropdown-item:hover {
             background: #f8f9fa;
         }
+/* Reduce padding in navbar */
+.navbar-custom {
+    padding-top: 10px; /* Adjust top padding */
+    padding-bottom: 5px; /* Adjust bottom padding */
+}
+
+/* Reduce space around navbar items */
+.navbar-nav .nav-item {
+    margin-top: 0;
+    margin-bottom: 0; /* Remove margins between nav items */
+}
+
+/* Reduce padding in navbar links */
+.navbar-nav .nav-link {
+    padding-top: 5px; /* Adjust top padding */
+    padding-bottom: 5px; /* Adjust bottom padding */
+}
 
         /* Header Section */
         .header-section {
@@ -157,18 +176,17 @@
     <nav class="navbar navbar-expand-lg navbar-custom">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <img src="img/MJE Logo (4).PNG" alt="MJE IT Logo">
+                <img src="img/MJE Logo (9).png" alt="MJE IT Logo">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"><i class="fas fa-bars" style="color:#333;"></i></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="1-1learning.html"><i class="fas fa-user-graduate"></i> 1-1 Learning</a></li>
                     <li class="nav-item"><a class="nav-link" href="ebook.html"><i class="fas fa-book"></i> Ebooks</a></li>
                     <li class="nav-item"><a class="nav-link" href="courses.html"><i class="fas fa-chalkboard-teacher"></i> Courses</a></li>
-                    <li class="nav-item"><a class="nav-link" href="1-1learning.html"><i class="fas fa-user-graduate"></i> 1-1 Learning</a></li>
                     <li class="nav-item"><a class="nav-link" href="itservices.html"><i class="fas fa-laptop"></i> IT Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="store.html"><i class="fas fa-store"></i> Store</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
                 </ul>
             </div>

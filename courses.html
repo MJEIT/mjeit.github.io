@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Courses | MJE IT</title>
-    <meta name="description" content="Explore our range of professional courses designed to enhance your IT skills and career.">
+    <title>MJE IT</title>
+    <!-- Site Icon (Favicon) -->
+    <link rel="icon" href="img\MJE Logo (3).png" type="image/png">
+    <meta name="description" content="Professional IT Services.">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <!-- Font Awesome -->
@@ -22,8 +24,8 @@
             padding: 0;
         }
 
-        /* Navigation Bar */
-        .navbar-custom {
+               /* Navigation Bar */
+               .navbar-custom {
             background: rgba(255, 255, 255, 0.9); /* Translucent background */
             border-bottom: 1px solid #ddd; /* Soft border */
             padding: 15px 0;
@@ -66,6 +68,23 @@
         .navbar-custom .navbar-nav .nav-item.dropdown .dropdown-menu .dropdown-item:hover {
             background: #f8f9fa;
         }
+/* Reduce padding in navbar */
+.navbar-custom {
+    padding-top: 10px; /* Adjust top padding */
+    padding-bottom: 5px; /* Adjust bottom padding */
+}
+
+/* Reduce space around navbar items */
+.navbar-nav .nav-item {
+    margin-top: 0;
+    margin-bottom: 0; /* Remove margins between nav items */
+}
+
+/* Reduce padding in navbar links */
+.navbar-nav .nav-link {
+    padding-top: 5px; /* Adjust top padding */
+    padding-bottom: 5px; /* Adjust bottom padding */
+}
 
         /* Header Section */
         .header-section {
@@ -167,22 +186,21 @@
 </head>
 <body>
 
-     <!-- Navigation Bar -->
-     <nav class="navbar navbar-expand-lg navbar-custom">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-custom">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <img src="img/MJE Logo (4).PNG" alt="MJE IT Logo">
+                <img src="img/MJE Logo (9).png" alt="MJE IT Logo">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"><i class="fas fa-bars" style="color:#333;"></i></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="1-1learning.html"><i class="fas fa-user-graduate"></i> 1-1 Learning</a></li>
                     <li class="nav-item"><a class="nav-link" href="ebook.html"><i class="fas fa-book"></i> Ebooks</a></li>
                     <li class="nav-item"><a class="nav-link" href="courses.html"><i class="fas fa-chalkboard-teacher"></i> Courses</a></li>
-                    <li class="nav-item"><a class="nav-link" href="1-1learning.html"><i class="fas fa-user-graduate"></i> 1-1 Learning</a></li>
                     <li class="nav-item"><a class="nav-link" href="itservices.html"><i class="fas fa-laptop"></i> IT Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="store.html"><i class="fas fa-store"></i> Store</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
                 </ul>
             </div>
@@ -197,55 +215,136 @@
         </div>
     </header>
 
-    <!-- Courses List Section -->
-    <section class="courses-list">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="course-item">
-                        <h3>Introduction to Programming</h3>
-                        <p>Learn the basics of programming with this introductory course designed for beginners.</p>
-                        <a href="#">Learn More</a>
-                    </div>
+   <!-- Courses List Section -->
+<section class="courses-list">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="course-item" data-course="1">
+                    <h3>Introduction to Computer Hardware</h3>
+                    <p>Dive into the world of computer hardware and understand how computers work.</p>
+                    <a href="#" class="learn-more" data-toggle="modal" data-target="#courseModal">Learn More</a>
                 </div>
-                <div class="col-md-4">
-                    <div class="course-item">
-                        <h3>Advanced Web Development</h3>
-                        <p>Take your web development skills to the next level.</p>
-                        <a href="#">Learn More</a>
-                    </div>
+            </div>
+            <div class="col-md-4">
+                <div class="course-item" data-course="2">
+                    <h3>Advanced Web Development</h3>
+                    <p>Take your web development skills to the next level.</p>
+                    <a href="#" class="learn-more" data-toggle="modal" data-target="#courseModal">Learn More</a>
                 </div>
-                <div class="col-md-4">
-                    <div class="course-item">
-                        <h3>Cloud Computing Essentials</h3>
-                        <p>Understand the core concepts of cloud computing.</p>
-                        <a href="#">Learn More</a>
-                    </div>
+            </div>
+            <div class="col-md-4">
+                <div class="course-item" data-course="3">
+                    <h3>Cloud Computing Essentials</h3>
+                    <p>Understand the core concepts of cloud computing.</p>
+                    <a href="#" class="learn-more" data-toggle="modal" data-target="#courseModal">Learn More</a>
                 </div>
-                <div class="col-md-4">
-                    <div class="course-item">
-                        <h3>Data Science Fundamentals</h3>
-                        <p>Explore the basics of data science and its applications in modern IT environments.</p>
-                        <a href="#">Learn More</a>
-                    </div>
+            </div>
+            <div class="col-md-4">
+                <div class="course-item" data-course="4">
+                    <h3>Data Science Fundamentals</h3>
+                    <p>Explore the basics of data science and its applications in modern IT environments.</p>
+                    <a href="#" class="learn-more" data-toggle="modal" data-target="#courseModal">Learn More</a>
                 </div>
-                <div class="col-md-4">
-                    <div class="course-item">
-                        <h3>Cybersecurity for Beginners</h3>
-                        <p>Get introduced to the essentials of cybersecurity.</p>
-                        <a href="#">Learn More</a>
-                    </div>
+            </div>
+            <div class="col-md-4">
+                <div class="course-item" data-course="5">
+                    <h3>Cybersecurity for Beginners</h3>
+                    <p>Get introduced to the essentials of cybersecurity.</p>
+                    <a href="#" class="learn-more" data-toggle="modal" data-target="#courseModal">Learn More</a>
                 </div>
-                <div class="col-md-4">
-                    <div class="course-item">
-                        <h3>IT Project Management 1.0</h3>
-                        <p>Learn the best practices for managing IT projects effectively from start to finish.</p>
-                        <a href="#">Learn More</a>
-                    </div>
+            </div>
+            <div class="col-md-4">
+                <div class="course-item" data-course="6">
+                    <h3>IT Project Management 1.0</h3>
+                    <p>Learn the best practices for managing IT projects effectively from start to finish.</p>
+                    <a href="#" class="learn-more" data-toggle="modal" data-target="#courseModal">Learn More</a>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
+<!-- Modal Section -->
+<div class="modal fade" id="courseModal" tabindex="-1" role="dialog" aria-labelledby="courseModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="courseModalLabel">Course Title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <h4>Description</h4>
+                <p class="course-description">Course details will appear here.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // JavaScript to handle modal content dynamically
+    const courseItems = document.querySelectorAll('.course-item');
+    const modalTitle = document.querySelector('#courseModalLabel');
+    const modalDescription = document.querySelector('.course-description');
+
+    courseItems.forEach(item => {
+        item.addEventListener('click', (e) => {
+            const courseID = item.getAttribute('data-course');
+
+            let courseDetails = {};
+
+            // Map the course details
+            switch(courseID) {
+                case "1":
+                    courseDetails = {
+                        title: "Introduction to Computer Hardware",
+                        description: "Dive into the world of computer hardware and understand how computers work from the inside out. This course covers basic computer components, installation, and maintenance."
+                    };
+                    break;
+                case "2":
+                    courseDetails = {
+                        title: "Advanced Web Development",
+                        description: "Take your web development skills to the next level. In this course, you will explore advanced JavaScript, back-end technologies, and modern web frameworks."
+                    };
+                    break;
+                case "3":
+                    courseDetails = {
+                        title: "Cloud Computing Essentials",
+                        description: "Understand the core concepts of cloud computing, including infrastructure as a service (IaaS), platform as a service (PaaS), and cloud security."
+                    };
+                    break;
+                case "4":
+                    courseDetails = {
+                        title: "Data Science Fundamentals",
+                        description: "Explore the basics of data science, including data analysis, statistical modeling, and machine learning techniques, with real-world applications."
+                    };
+                    break;
+                case "5":
+                    courseDetails = {
+                        title: "Cybersecurity for Beginners",
+                        description: "Get introduced to the essentials of cybersecurity. Learn about common cyber threats, network security, cryptography, and data protection."
+                    };
+                    break;
+                case "6":
+                    courseDetails = {
+                        title: "IT Project Management 1.0",
+                        description: "Learn the best practices for managing IT projects effectively. This course covers project initiation, planning, execution, and closure using industry-standard methodologies."
+                    };
+                    break;
+            }
+
+            // Set modal title and description dynamically
+            modalTitle.textContent = courseDetails.title;
+            modalDescription.textContent = courseDetails.description;
+        });
+    });
+</script>
+
 
     <!-- Footer Section -->
     <footer class="footer-section">

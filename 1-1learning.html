@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>1-1 Learning | MJE IT</title>
-    <meta name="description" content="Personalized 1-1 learning sessions tailored to your IT learning needs.">
+    <title>MJE IT</title>
+    <!-- Site Icon (Favicon) -->
+    <link rel="icon" href="img\MJE Logo (3).png" type="image/png">
+    <meta name="description" content="Professional IT Services.">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <!-- Font Awesome -->
@@ -66,6 +68,23 @@
         .navbar-custom .navbar-nav .nav-item.dropdown .dropdown-menu .dropdown-item:hover {
             background: #f8f9fa;
         }
+/* Reduce padding in navbar */
+.navbar-custom {
+    padding-top: 10px; /* Adjust top padding */
+    padding-bottom: 5px; /* Adjust bottom padding */
+}
+
+/* Reduce space around navbar items */
+.navbar-nav .nav-item {
+    margin-top: 0;
+    margin-bottom: 0; /* Remove margins between nav items */
+}
+
+/* Reduce padding in navbar links */
+.navbar-nav .nav-link {
+    padding-top: 5px; /* Adjust top padding */
+    padding-bottom: 5px; /* Adjust bottom padding */
+}
 
         /* Header Section */
         .header-section {
@@ -173,18 +192,17 @@
     <nav class="navbar navbar-expand-lg navbar-custom">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <img src="img/MJE Logo (4).PNG" alt="MJE IT Logo">
+                <img src="img/MJE Logo (9).png" alt="MJE IT Logo">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"><i class="fas fa-bars" style="color:#333;"></i></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="1-1learning.html"><i class="fas fa-user-graduate"></i> 1-1 Learning</a></li>
                     <li class="nav-item"><a class="nav-link" href="ebook.html"><i class="fas fa-book"></i> Ebooks</a></li>
                     <li class="nav-item"><a class="nav-link" href="courses.html"><i class="fas fa-chalkboard-teacher"></i> Courses</a></li>
-                    <li class="nav-item"><a class="nav-link" href="1-1learning.html"><i class="fas fa-user-graduate"></i> 1-1 Learning</a></li>
                     <li class="nav-item"><a class="nav-link" href="itservices.html"><i class="fas fa-laptop"></i> IT Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="store.html"><i class="fas fa-store"></i> Store</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
                 </ul>
             </div>
@@ -199,14 +217,170 @@
         </div>
     </header>
 
-    <!-- Content Section -->
-    <section class="content-section">
-        <div class="container">
-            <h2>Seeking experienced guidance?</h2>
-            <p>1-1 Learning offers personalized instruction with an expert tutor dedicated to your success. Whether you're looking to deepen your knowledge or learn a new skill, our tailored sessions are designed to fit your learning style and pace.</p>
-            <a href="https://calendly.com/mike-eggerton-mjeit/30min" class="btn btn-primary">Schedule Your Session</a>
+   <!-- 1-1 IT Mentoring Section -->
+<section class="content-section bg-light py-5">
+    <div class="container text-center">
+        <!-- Main Heading -->
+        <h2 class="display-4 font-weight-bold mb-4 text-dark">Elevate Your IT Career with Personalized Mentorship</h2>
+        <p class="lead mb-5">Are you looking to break into IT, level up your career, or transition into a new tech role? You don’t have to do it alone. My personalized mentorship program is designed to give you the skills, strategy, and support you need to succeed in this fast-evolving industry.</p>
+
+        <!-- Who is this for? Section -->
+        <h3 class="font-weight-bold mb-4 text-dark">Who Is This For?</h3>
+        <div class="row justify-content-center">
+            <div class="col-md-4 mb-4">
+                <div class="card p-4 shadow-lg">
+                    <i class="fas fa-laptop-code fa-3x text-primary mb-3"></i>
+                    <h4 class="font-weight-bold mb-3">Aspiring IT Professionals</h4>
+                    <p>Need help getting started in IT, earning certifications, or launching your job search?</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card p-4 shadow-lg">
+                    <i class="fas fa-briefcase fa-3x text-success mb-3"></i>
+                    <h4 class="font-weight-bold mb-3">Early-Career IT Professionals</h4>
+                    <p>Looking to grow your career / prepare for interviews?</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card p-4 shadow-lg">
+                    <i class="fas fa-users-cog fa-3x text-warning mb-3"></i>
+                    <h4 class="font-weight-bold mb-3">Experienced IT Professionals</h4>
+                    <p>Ready to step into leadership roles or specialize in a niche?</p>
+                </div>
+            </div>
         </div>
-    </section>
+
+        <hr class="my-5">
+
+        <!-- What You Get Section -->
+        <h3 class="font-weight-bold mb-4">What You Will Get</h3>
+        <div class="row text-left">
+            <!-- 1-on-1 IT Career Mentorship -->
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-lg p-4 text-center">
+                    <i class="fas fa-user-tie fa-3x text-primary mb-3"></i>
+                    <h4 class="font-weight-bold mb-3">IT Career Mentorship</h4>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-check-circle text-success"></i> Personalized weekly check-ins for ongoing support</li>
+                        <li><i class="fas fa-check-circle text-success"></i> Tailored career roadmap based on your goals</li>
+                        <li><i class="fas fa-check-circle text-success"></i> Access to exclusive industry insights & upskilling opportunities</li>
+                        <li><i class="fas fa-check-circle text-success"></i> Job search support: mock interviews, recruiter strategies</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- LinkedIn & Personal Branding -->
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-lg p-4 text-center">
+                    <i class="fas fa-link fa-3x text-info mb-3"></i>
+                    <h4 class="font-weight-bold mb-3">LinkedIn & Personal Branding</h4>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-check-circle text-success"></i> Optimize your LinkedIn profile to attract top recruiters</li>
+                        <li><i class="fas fa-check-circle text-success"></i> Profile feedback to help you stand out from the crowd</li>
+                        <li><i class="fas fa-check-circle text-success"></i> Posting strategies to build your personal brand</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Exclusive Discounts & Resources -->
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-lg p-4 text-center">
+                    <i class="fas fa-certificate fa-3x text-danger mb-3"></i>
+                    <h4 class="font-weight-bold mb-3">Exclusive Discounts & Resources</h4>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-check-circle text-success"></i> Discounted **CompTIA certification vouchers**</li>
+                        <li><i class="fas fa-check-circle text-success"></i> Special discounts on **new tech courses**</li>
+                        <li><i class="fas fa-check-circle text-success"></i> Access to a **private Discord community** for networking and support</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <hr class="my-5">
+
+        <!-- Expanded Services Section -->
+        <h3 class="font-weight-bold mb-4">Additional Services You Will Receive</h3>
+        <div class="row text-left">
+            <!-- Job Search & Interview Prep -->
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-lg p-4 text-center">
+                    <i class="fas fa-search fa-3x text-primary mb-3"></i>
+                    <h4 class="font-weight-bold mb-3">Job Search & Interview Prep</h4>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-check-circle text-success"></i> Resume reviews & mock interviews to build confidence</li>
+                        <li><i class="fas fa-check-circle text-success"></i> Tailored job search strategies based on your skills</li>
+                        <li><i class="fas fa-check-circle text-success"></i> Guidance on approaching recruiters effectively</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Tech Training & Upskilling -->
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-lg p-4 text-center">
+                    <i class="fas fa-laptop-code fa-3x text-info mb-3"></i>
+                    <h4 class="font-weight-bold mb-3">Tech Training & Upskilling</h4>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-check-circle text-success"></i> Learn in-demand tech skills for career advancement</li>
+                        <li><i class="fas fa-check-circle text-success"></i> Access to premium tutorials and learning materials</li>
+                        <li><i class="fas fa-check-circle text-success"></i> Stay ahead with relevant industry certifications</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Career Roadmap & Goal Setting -->
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-lg p-4 text-center">
+                    <i class="fas fa-map-signs fa-3x text-warning mb-3"></i>
+                    <h4 class="font-weight-bold mb-3">Career Roadmap & Goal Setting</h4>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-check-circle text-success"></i> Personalized career roadmap to guide your progress</li>
+                        <li><i class="fas fa-check-circle text-success"></i> Goal setting to ensure steady career growth</li>
+                        <li><i class="fas fa-check-circle text-success"></i> Regular check-ins to track your development</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <hr class="my-5">
+
+        <!-- How It Works Section -->
+        <h3 class="font-weight-bold mb-4">How It Works</h3>
+        <div class="row justify-content-center">
+            <div class="col-md-3 mb-4">
+                <div class="card shadow-lg p-4 text-center">
+                    <i class="fas fa-calendar-day fa-2x text-success mb-3"></i>
+                    <h4 class="font-weight-bold">Step 1: Book Your Free Consultation</h4>
+                    <p>Let’s chat about your career goals and challenges in a free 15-minute session.</p>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card shadow-lg p-4 text-center">
+                    <i class="fas fa-check-circle fa-2x text-info mb-3"></i>
+                    <h4 class="font-weight-bold">Step 2: Choose Your Mentorship Plan</h4>
+                    <p>Select the perfect plan for your needs, whether it’s a single session or ongoing mentorship.</p>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card shadow-lg p-4 text-center">
+                    <i class="fas fa-laptop-code fa-2x text-primary mb-3"></i>
+                    <h4 class="font-weight-bold">Step 3: Get Mentored, Get Ahead</h4>
+                    <p>Receive ongoing guidance, job search support, and access to exclusive resources to elevate your career.</p>
+                </div>
+            </div>
+        </div>
+
+        <hr class="my-5">
+
+        <!-- Free Consultation CTA -->
+        <h4 class="font-weight-bold mb-4">Book Your Free 15-Minute Consultation</h4>
+        <a href="https://calendly.com/mike-mjeit/15min" class="btn btn-primary btn-lg" target="_blank">Schedule Now</a>
+
+        <hr class="my-5">
+
+        
+    </div>
+</section>
+
 
     <!-- Benefits Section -->
     <section class="benefits-section">

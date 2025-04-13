@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ebooks | MJE IT</title>
-    <meta name="description" content="Explore our collection of informative and educational ebooks designed to enhance your IT knowledge and career.">
+    <title>MJE IT</title>
+    <!-- Site Icon (Favicon) -->
+    <link rel="icon" href="img\MJE Logo (3).png" type="image/png">
+    <meta name="description" content="Professional IT Services.">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <!-- Font Awesome -->
@@ -22,8 +24,8 @@
             padding: 0;
         }
 
-        /* Navigation Bar */
-        .navbar-custom {
+                /* Navigation Bar */
+                .navbar-custom {
             background: rgba(255, 255, 255, 0.9); /* Translucent background */
             border-bottom: 1px solid #ddd; /* Soft border */
             padding: 15px 0;
@@ -66,6 +68,23 @@
         .navbar-custom .navbar-nav .nav-item.dropdown .dropdown-menu .dropdown-item:hover {
             background: #f8f9fa;
         }
+/* Reduce padding in navbar */
+.navbar-custom {
+    padding-top: 10px; /* Adjust top padding */
+    padding-bottom: 5px; /* Adjust bottom padding */
+}
+
+/* Reduce space around navbar items */
+.navbar-nav .nav-item {
+    margin-top: 0;
+    margin-bottom: 0; /* Remove margins between nav items */
+}
+
+/* Reduce padding in navbar links */
+.navbar-nav .nav-link {
+    padding-top: 5px; /* Adjust top padding */
+    padding-bottom: 5px; /* Adjust bottom padding */
+}
 
         /* Header Section */
         .header-section {
@@ -167,22 +186,21 @@
 </head>
 <body>
 
-    <!-- Navigation Bar -->
+     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-custom">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <img src="img/MJE Logo (4).PNG" alt="MJE IT Logo">
+                <img src="img/MJE Logo (9).png" alt="MJE IT Logo">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"><i class="fas fa-bars" style="color:#333;"></i></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="1-1learning.html"><i class="fas fa-user-graduate"></i> 1-1 Learning</a></li>
                     <li class="nav-item"><a class="nav-link" href="ebook.html"><i class="fas fa-book"></i> Ebooks</a></li>
                     <li class="nav-item"><a class="nav-link" href="courses.html"><i class="fas fa-chalkboard-teacher"></i> Courses</a></li>
-                    <li class="nav-item"><a class="nav-link" href="1-1learning.html"><i class="fas fa-user-graduate"></i> 1-1 Learning</a></li>
                     <li class="nav-item"><a class="nav-link" href="itservices.html"><i class="fas fa-laptop"></i> IT Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="store.html"><i class="fas fa-store"></i> Store</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
                 </ul>
             </div>
@@ -198,20 +216,71 @@
     </header>
 
     <!-- Ebook List Section -->
-    <section class="ebook-list">
-        <div class="container">
-            <div class="row">
-                <!-- Ebook 1 -->
-                <div class="col-md-4">
-                    <div class="ebook-item">
-                        <h3>A Practical Guide To Starting Your IT Career</h3>
-                        <p>Are you passionate about technology and eager to launch a successful career in the dynamic world of IT? Look no further! A Practical Guide To Starting Your IT Career is your ultimate companion on the journey to becoming an IT professional.</p>
-                        <a href="understanding-it-infrastructure.html">Read More</a>
-                    </div>
+<section class="ebook-list">
+    <div class="container">
+        <div class="row">
+            <!-- Ebook 1 -->
+            <div class="col-md-4">
+                <div class="ebook-item">
+                    <!-- Ebook Image (with a click event to open the modal) -->
+                    <img src="img/1.png" alt="A Practical Guide To Starting Your IT Career" class="img-fluid mb-3" id="ebook1Image" style="cursor: pointer;">
+                    <p>Are you passionate about technology and eager to launch a successful career in the dynamic world of IT? Look no further! A Practical Guide To Starting Your IT Career is your ultimate companion on the journey to becoming an IT professional.</p>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
+<!-- Modal (Popup Window) -->
+<div id="ebookModal" class="modal" tabindex="-1" role="dialog" aria-labelledby="ebookModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document" style="max-width: 50%; margin: auto;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="ebookModalLabel">Coming Soon</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <h6>Additional Information:</h6>
+                <p>Are you passionate about technology and eager to launch a successful career in the dynamic world of IT? Look no further! This guide is your ultimate companion on the journey to becoming an IT professional. Learn the skills, strategies, and knowledge necessary to stand out in the competitive IT job market. From technical know-how to soft skills, this ebook covers everything you need to know to start your career.</p>
+                <h6>What You Will Learn:</h6>
+                <ul>
+                    <li>Understanding key IT concepts</li>
+                    <li>Building a strong foundation</li>
+                    <li>Career paths and opportunities in IT</li>
+                    <li>Securing your 1st role</li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<!-- JavaScript to Open the Modal -->
+<script>
+    // Get the modal element
+    var modal = document.getElementById("ebookModal");
+    var ebookImage = document.getElementById("ebook1Image");
+
+    // Open the modal when the ebook image is clicked
+    ebookImage.onclick = function() {
+        $(modal).modal('show');
+    }
+
+    // Close the modal when clicking on the close button
+    $('.close').click(function() {
+        $(modal).modal('hide');
+    });
+</script>
+
 
     <!-- Footer Section -->
     <footer class="footer-section">
