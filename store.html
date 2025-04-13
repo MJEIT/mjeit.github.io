@@ -3,10 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MJE IT</title>
-    <!-- Site Icon (Favicon) -->
-    <link rel="icon" href="img\MJE Logo (3).png" type="image/png">
-    <meta name="description" content="Professional IT Services.">
+    <title>Store | MJE IT</title>
+    <meta name="description" content="Explore our store for the latest in technology products and services.">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <!-- Font Awesome -->
@@ -24,8 +22,8 @@
             padding: 0;
         }
 
-                /* Navigation Bar */
-                .navbar-custom {
+        /* Navigation Bar */
+        .navbar-custom {
             background: rgba(255, 255, 255, 0.9); /* Translucent background */
             border-bottom: 1px solid #ddd; /* Soft border */
             padding: 15px 0;
@@ -68,23 +66,6 @@
         .navbar-custom .navbar-nav .nav-item.dropdown .dropdown-menu .dropdown-item:hover {
             background: #f8f9fa;
         }
-/* Reduce padding in navbar */
-.navbar-custom {
-    padding-top: 10px; /* Adjust top padding */
-    padding-bottom: 5px; /* Adjust bottom padding */
-}
-
-/* Reduce space around navbar items */
-.navbar-nav .nav-item {
-    margin-top: 0;
-    margin-bottom: 0; /* Remove margins between nav items */
-}
-
-/* Reduce padding in navbar links */
-.navbar-nav .nav-link {
-    padding-top: 5px; /* Adjust top padding */
-    padding-bottom: 5px; /* Adjust bottom padding */
-}
 
         /* Header Section */
         .header-section {
@@ -103,55 +84,51 @@
             line-height: 1.6;
         }
 
-        /* Content Section */
-        .content-section {
-            padding: 60px 20px;
-            background-color: #f8f9fa;
-            color: #333;
-            text-align: center;
-        }
-        .content-section h2 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 30px;
-        }
-        .content-section p {
-            font-size: 1.2rem;
-            line-height: 1.8;
-            margin-bottom: 20px;
-        }
-
-        /* Ebook List */
-        .ebook-list {
+        /* Store Section */
+        .store-section {
             padding: 60px 20px;
             background-color: #fff;
         }
-        .ebook-item {
+        .store-section h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
             margin-bottom: 30px;
-            padding: 20px;
+            text-align: center;
+        }
+        .product-card {
             border: 1px solid #ddd;
             border-radius: 10px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        .ebook-item:hover {
+        .product-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         }
-        .ebook-item h3 {
+        .product-card img {
+            border-bottom: 1px solid #ddd;
+            border-radius: 10px 10px 0 0;
+            width: 100%;
+        }
+        .product-card .card-body {
+            padding: 20px;
+        }
+        .product-card h3 {
             font-size: 1.8rem;
             margin-bottom: 10px;
         }
-        .ebook-item p {
+        .product-card p {
             font-size: 1rem;
             color: #555;
         }
-        .ebook-item a {
-            color: #28a745;
-            font-weight: 500;
+        .product-card .btn-primary {
+            background-color: #28a745;
+            border-color: #28a745;
+            margin-top: 10px;
         }
-        .ebook-item a:hover {
-            text-decoration: underline;
+        .product-card .btn-primary:hover {
+            background-color: #218838;
+            border-color: #1e7e34;
         }
 
         /* Footer Section */
@@ -186,21 +163,22 @@
 </head>
 <body>
 
-     <!-- Navigation Bar -->
+    <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-custom">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <img src="img/MJE Logo (9).png" alt="MJE IT Logo">
+                <img src="img/MJE Logo (4).PNG" alt="MJE IT Logo">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"><i class="fas fa-bars" style="color:#333;"></i></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"><a class="nav-link" href="1-1learning.html"><i class="fas fa-user-graduate"></i> 1-1 Learning</a></li>
                     <li class="nav-item"><a class="nav-link" href="ebook.html"><i class="fas fa-book"></i> Ebooks</a></li>
                     <li class="nav-item"><a class="nav-link" href="courses.html"><i class="fas fa-chalkboard-teacher"></i> Courses</a></li>
+                    <li class="nav-item"><a class="nav-link" href="1-1learning.html"><i class="fas fa-user-graduate"></i> 1-1 Learning</a></li>
                     <li class="nav-item"><a class="nav-link" href="itservices.html"><i class="fas fa-laptop"></i> IT Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="store.html"><i class="fas fa-store"></i> Store</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
                 </ul>
             </div>
@@ -210,82 +188,37 @@
     <!-- Header Section -->
     <header class="header-section">
         <div class="container">
-            <h1>Ebooks</h1>
-            <p>Explore our collection of informative and educational ebooks designed to enhance your IT knowledge and career. Click on an ebook to learn more.</p>
+            <h1>Store</h1>
+            <p>Browse through our curated collection of technology products and services.</p>
         </div>
     </header>
 
-    <!-- Ebook List Section -->
-<section class="ebook-list">
-    <div class="container">
-        <div class="row">
-            <!-- Ebook 1 -->
-            <div class="col-md-4">
-                <div class="ebook-item">
-                    <!-- Ebook Image (with a click event to open the modal) -->
-                    <img src="img/Book3.jpg" alt="A Practical Guide To Starting Your IT Career" class="img-fluid mb-3" id="ebook1Image" style="cursor: pointer;">
-                    <p>Are you passionate about technology and eager to launch a successful career in the dynamic world of IT? Look no further! A Practical Guide To Starting Your IT Career is your ultimate companion on the journey to becoming an IT professional.</p>
+    <!-- Store Section -->
+    <section class="store-section">
+        <div class="container">
+            <h2></h2>
+            <div class="row">
+                <!-- Product 1 -->
+                <div class="col-md-4">
+                    <div class="card product-card">
+                        <img src="img/Book3.jpg" alt="Product 1">
+                        <div class="card-body">
+                            <h3>A Practical Guide To Starting Your IT Career.</h3>
+                            <p>Whether you're a recent graduate, a career changer, or an aspiring IT enthusiast, this guide will empower you to take those critical first steps toward your dream IT career. From choosing the right educational path to building a strong professional network, you'll find everything you need to succeed.</p>
+                            <a href="#" class="btn btn-primary">Buy Now</a>
+                        </div>
+                    </div>
                 </div>
+                <!-- Product 2 -->
             </div>
+            <!-- Add more products as needed -->
         </div>
-    </div>
-</section>
-
-<!-- Modal (Popup Window) -->
-<div id="ebookModal" class="modal" tabindex="-1" role="dialog" aria-labelledby="ebookModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document" style="max-width: 50%; margin: auto;">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="ebookModalLabel">Coming Soon</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <h6>Additional Information:</h6>
-                <p>Are you passionate about technology and eager to launch a successful career in the dynamic world of IT? Look no further! This guide is your ultimate companion on the journey to becoming an IT professional. Learn the skills, strategies, and knowledge necessary to stand out in the competitive IT job market. From technical know-how to soft skills, this ebook covers everything you need to know to start your career.</p>
-                <h6>What You Will Learn:</h6>
-                <ul>
-                    <li>Understanding key IT concepts</li>
-                    <li>Building a strong foundation</li>
-                    <li>Career paths and opportunities in IT</li>
-                    <li>Securing your 1st role</li>
-                </ul>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Bootstrap JS, Popper.js, and jQuery -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-<!-- JavaScript to Open the Modal -->
-<script>
-    // Get the modal element
-    var modal = document.getElementById("ebookModal");
-    var ebookImage = document.getElementById("ebook1Image");
-
-    // Open the modal when the ebook image is clicked
-    ebookImage.onclick = function() {
-        $(modal).modal('show');
-    }
-
-    // Close the modal when clicking on the close button
-    $('.close').click(function() {
-        $(modal).modal('hide');
-    });
-</script>
-
+    </section>
 
     <!-- Footer Section -->
     <footer class="footer-section">
         <div class="container">
-            <p>&copy; 2024 MJE IT. All rights reserved. <a href="privacy-policy.html" style="color: #fff; text-decoration: underline;">Privacy Policy</a> | <a href="terms-of-service.html" style="color: #fff; text-decoration: underline;">Terms of Service</a></p>
+            <p>&copy; 2024 MJE IT. All rights reserved.</p>
         </div>
     </footer>
 
