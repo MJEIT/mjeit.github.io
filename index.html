@@ -29,7 +29,7 @@
   .nav{display:flex;align-items:center;justify-content:space-between;height:90px;}
   .brand{display:flex;align-items:center;gap:12px}
   .brand .logo{background:transparent;border:none;width:auto;height:auto;}
-  .brand .logo img{max-height:60px;} /* larger natural-scaling logo */
+  .brand .logo img{max-height:60px;} /* bigger logo */
   .brand .name span{color:var(--muted);font-size:12px}
   .links{display:flex;align-items:center;gap:20px}
   .links a{font-weight:600;font-size:14px;opacity:.85;position:relative;padding:6px 4px;}
@@ -61,7 +61,7 @@
   .stat .num{font-size:24px;font-weight:800;color:var(--accent)}
   .status-card{background:var(--panel);border-radius:16px;padding:20px;box-shadow:0 4px 16px rgba(0,0,0,.4)}
 
-  /* ===== Why Work With Us (with green grid background) ===== */
+  /* ===== Why Work With Us (green grid bg) ===== */
   .why-wrap{position:relative;background:linear-gradient(180deg,#0f1212 0%, #0c0e0f 100%);overflow:hidden;}
   .why-wrap::before{
     content:""; position:absolute; inset:0;
@@ -70,63 +70,89 @@
       radial-gradient(700px 300px at 85% 0%, rgba(0,195,107,.10), transparent 60%),
       linear-gradient(0deg, rgba(255,255,255,.04) 1px, transparent 1px),
       linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);
-    background-size: auto, auto, 32px 32px, 32px 32px; /* subtle grid */
+    background-size: auto, auto, 32px 32px, 32px 32px;
     mask: linear-gradient(#000, transparent 85%);
-    -webkit-mask: linear-gradient(#000, transparent 85%); /* Safari */
+    -webkit-mask: linear-gradient(#000, transparent 85%);
     pointer-events:none;
   }
   .why{position:relative;text-align:center;}
   .why .subtitle{color:var(--muted);text-transform:uppercase;letter-spacing:1px;font-size:12px;margin-bottom:8px}
+  .why .headline{margin-bottom:8px}
+  .why .kicker{color:var(--muted);max-width:760px;margin:0 auto}
   .why-grid{margin-top:28px;display:grid;gap:18px;}
   @media(min-width:980px){.why-grid{grid-template-columns:repeat(4,1fr)}}
-  .why-card{background:linear-gradient(180deg,var(--panel),#101212);border-radius:14px;padding:18px 16px;text-align:left;box-shadow:0 3px 12px rgba(0,0,0,.35)}
-  .why-ico{width:44px;height:44px;border-radius:12px;background:#0d2016;display:flex;align-items:center;justify-content:center;color:var(--accent);font-size:20px;margin-bottom:10px;}
+  .why-card{background:linear-gradient(180deg,var(--panel),#101212);border-radius:14px;padding:18px 16px;text-align:left;box-shadow:0 3px 12px rgba(0,0,0,.35);transition:transform .25s ease,box-shadow .25s ease}
+  .why-card:hover{transform:translateY(-4px);box-shadow:0 10px 24px rgba(0,0,0,.5)}
+  .why-ico{width:44px;height:44px;border-radius:12px;background:#0d2016;border:1px solid var(--edge-soft);display:flex;align-items:center;justify-content:center;color:var(--accent);font-size:20px;margin-bottom:10px;}
   .why-title{color:var(--ink);font-weight:800;margin:0 0 6px}
+  .why-line{color:var(--text);margin:0 0 10px}
   .why-list{list-style:none;margin:0;padding:0;display:grid;gap:6px}
   .why-list li{font-size:14px;color:var(--muted);display:flex;gap:8px;align-items:flex-start}
   .why-list li .tick{color:var(--accent)}
 
-  /* ===== Services / Cases / Testimonials ===== */
-  .services-grid,.case-grid,.test-grid{display:grid;gap:22px;margin-top:24px}
-  @media(min-width:980px){.services-grid{grid-template-columns:repeat(3,1fr)}.case-grid{grid-template-columns:repeat(3,1fr)}.test-grid{grid-template-columns:repeat(3,1fr)}}
-  .service,.case,.quote,.card{background:var(--panel);border-radius:14px;box-shadow:0 3px 12px rgba(0,0,0,.4);padding:20px;transition:transform .25s ease,box-shadow .25s ease}
-  .service:hover,.case:hover,.quote:hover,.card:hover{transform:translateY(-4px);box-shadow:0 8px 20px rgba(0,0,0,.5)}
-  .service-ico{width:48px;height:48px;border-radius:12px;background:#0d2016;display:flex;align-items:center;justify-content:center;font-size:20px;color:var(--accent)}
+  /* ===== Grids ===== */
+  .services-grid,.case-grid,.test-grid,.edu-grid{display:grid;gap:22px;margin-top:24px}
+  @media(min-width:980px){
+    .services-grid{grid-template-columns:repeat(3,1fr)}
+    .case-grid{grid-template-columns:repeat(3,1fr)}
+    .test-grid{grid-template-columns:repeat(3,1fr)}
+    .edu-grid{grid-template-columns:repeat(3,1fr)}
+  }
+  .service,.case,.quote,.card,.edu-card{
+    background:var(--panel);border-radius:14px;box-shadow:0 3px 12px rgba(0,0,0,.4);padding:20px;
+    transition:transform .25s ease,box-shadow .25s ease;cursor:pointer
+  }
+  .service:hover,.case:hover,.quote:hover,.card:hover,.edu-card:hover{transform:translateY(-4px);box-shadow:0 8px 20px rgba(0,0,0,.5)}
+  .service-ico,.edu-ico{width:48px;height:48px;border-radius:12px;background:#0d2016;display:flex;align-items:center;justify-content:center;font-size:20px;color:var(--accent)}
   .case .thumb{height:140px;background:linear-gradient(135deg,#0c1f17,#0b1713);border-radius:10px;margin-bottom:12px}
   .case a.cta{color:var(--accent);font-weight:600}
 
   /* ===== Contact ===== */
   .contact-wrap{display:grid;gap:26px}@media(min-width:980px){.contact-wrap{grid-template-columns:1fr}}
   .field{display:flex;flex-direction:column;gap:8px} label{font-size:13px;color:var(--muted)}
-  input,textarea{width:100%;background:#0f1312;border:1px solid var(--edge);color:var(--text);padding:12px 14px;border-radius:10px;font:inherit;outline:none}
+  input,textarea{width:100%;background:#0f1312;border:1px solid var(--edge);color:var(--text);padding:12px 14px;border-radius:10px;font:inherit;outline:none;transition:border-color .2s,box-shadow .2s}
   input:focus,textarea:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(0,195,107,.15)}
 
   /* ===== Footer & Tech Stack ===== */
   footer{border-top:1px solid var(--edge);padding:32px 0;color:var(--muted);font-size:14px}
   .foot-grid{display:grid;gap:20px}@media(min-width:980px){.foot-grid{grid-template-columns:1fr 1fr}}
-  .stack{text-align:center}.stack .logo-row{display:flex;flex-wrap:wrap;gap:24px;justify-content:center;margin-top:20px}
+  .foot-links{display:flex;flex-wrap:wrap;gap:14px;margin-top:10px}
+  .foot-links a{cursor:pointer}
+  .stack{text-align:center}
+  .stack .logo-row{display:flex;flex-wrap:wrap;gap:24px;justify-content:center;margin-top:20px}
   .stack .logo-chip{display:flex;align-items:center;justify-content:center;padding:12px 18px;border-radius:12px;background:#0f1212;border:1px solid var(--edge-soft)}
-  .stack .logo-chip img{height:28px;max-width:120px}
+  .stack .logo-chip img{height:28px;max-width:140px}
+
+  /* ===== Cookie Banner ===== */
+  .cookie-banner{position:fixed;left:16px;right:16px;bottom:16px;z-index:3000;
+    background:var(--panel);border:1px solid var(--edge-soft);border-radius:12px;padding:12px 14px;display:flex;gap:12px;align-items:center;box-shadow:0 8px 28px rgba(0,0,0,.5)}
+  .cookie-banner p{margin:0;flex:1}
+  .cookie-banner button{border:0;border-radius:999px;padding:10px 14px;font-weight:700;cursor:pointer}
+  .cookie-banner .accept{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#06110d}
+  .cookie-banner .prefs{background:transparent;border:1px solid var(--edge-soft);color:var(--text)}
 
   /* ===== Modal ===== */
   .modal{position:fixed;inset:0;background:rgba(0,0,0,.75);display:flex;align-items:center;justify-content:center;z-index:2000;opacity:0;pointer-events:none;transition:opacity .3s ease}
   .modal.active{opacity:1;pointer-events:auto}
-  .modal-content{position:relative;background:var(--panel);padding:28px;max-width:640px;width:90%;border-radius:16px;box-shadow:0 8px 28px rgba(0,0,0,.6);transform:scale(.9);transition:transform .3s ease}
+  .modal-content{position:relative;background:var(--panel);padding:28px;max-width:720px;width:92%;border-radius:16px;box-shadow:0 8px 28px rgba(0,0,0,.6);transform:scale(.95);transition:transform .3s ease}
   .modal.active .modal-content{transform:scale(1)}
   .modal-close{position:absolute;top:16px;right:20px;font-size:20px;color:var(--muted);cursor:pointer}
+  .modal .btn{margin-top:16px;}
 </style>
 </head>
 <body>
 
+<!-- ===== HEADER ===== -->
 <header>
   <div class="container nav">
     <div class="brand">
       <div class="logo"><img src="img/MJE Logo (6).png" alt="MJEIT logo"></div>
       <div class="name"><b></b><span></span></div>
     </div>
-    <nav class="links">
+    <nav class="links" aria-label="Primary">
       <a href="#hero" class="active">Home</a>
       <a href="#services">Services</a>
+      <a href="#education">Education</a>
       <a href="#cases">Case Studies</a>
       <a href="#testimonials">Testimonials</a>
       <a href="#contact" class="cta">Contact</a>
@@ -135,7 +161,7 @@
 </header>
 
 <main id="hero">
-  <!-- HERO -->
+  <!-- ===== HERO ===== -->
   <section class="hero-wrap">
     <div class="container hero">
       <div>
@@ -147,9 +173,12 @@
           <div class="stat"><div class="ico">🖥️</div><div><div class="num" data-value="9000+">0</div><div>Servers Migrated</div></div></div>
           <div class="stat"><div class="ico">🌐</div><div><div class="num" data-value="2x">0</div><div>Global Infra Projects</div></div></div>
         </div>
-        <div class="cta-row"><button class="btn primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Schedule a Consultation</button><a class="btn ghost" href="#services">Explore Services</a></div>
+        <div class="cta-row">
+          <button class="btn primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Schedule a Consultation</button>
+          <a class="btn ghost" href="#services">Explore Services</a>
+        </div>
       </div>
-      <aside class="status-card">
+      <aside class="status-card" aria-label="Service status">
         <div style="display:flex;justify-content:space-between;align-items:center">
           <div><div class="muted">Managed Cloud</div><div style="font-weight:700;font-size:18px">Production-ready Azure &amp; AWS</div></div>
           <div class="muted">SLA: <b style="color:var(--accent)">99.95%</b></div>
@@ -162,25 +191,65 @@
     </div>
   </section>
 
-  <!-- WHY WORK WITH US (with grid bg) -->
+  <!-- ===== WHY WORK WITH US (green grid) ===== -->
   <section class="why-wrap" id="why">
     <div class="container why">
       <div class="subtitle">Why work with us</div>
       <h2 class="headline">Enterprise outcomes, startup speed</h2>
       <p class="kicker">We combine deep domain expertise with security-first engineering and transparent reporting — so you see value fast and safely.</p>
       <div class="why-grid">
-        <article class="why-card"><div class="why-ico">⚡</div><h3 class="why-title">Proven delivery</h3><p class="why-line">16+ years, thousands of tickets resolved, global migrations delivered.</p><ul class="why-list"><li><span class="tick">✔</span>Battle-tested runbooks & SLAs</li><li><span class="tick">✔</span>On-time, on-budget execution</li><li><span class="tick">✔</span>Executive-ready reporting</li></ul></article>
-        <article class="why-card"><div class="why-ico">🔐</div><h3 class="why-title">Secure by design</h3><p class="why-line">Zero-trust architecture and continuous monitoring across every layer.</p><ul class="why-list"><li><span class="tick">✔</span>Least privilege & hardening</li><li><span class="tick">✔</span>Detection & response built-in</li><li><span class="tick">✔</span>Audit-friendly controls</li></ul></article>
-        <article class="why-card"><div class="why-ico">🌍</div><h3 class="why-title">Global reach</h3><p class="why-line">Follow-the-sun support and multi-region infrastructure expertise.</p><ul class="why-list"><li><span class="tick">✔</span>24/7 monitoring & support</li><li><span class="tick">✔</span>Multi-region rollouts</li><li><span class="tick">✔</span>DR & resiliency patterns</li></ul></article>
-        <article class="why-card"><div class="why-ico">📈</div><h3 class="why-title">Measurable ROI</h3><p class="why-line">Transparent reporting tied to cost, risk, and uptime improvements.</p><ul class="why-list"><li><span class="tick">✔</span>Real-time dashboards</li><li><span class="tick">✔</span>Cost & performance tuning</li><li><span class="tick">✔</span>Quarterly value reviews</li></ul></article>
+        <article class="why-card">
+          <div class="why-ico">⚡</div>
+          <h3 class="why-title">Proven delivery</h3>
+          <p class="why-line">16+ years, thousands of tickets resolved, global migrations delivered.</p>
+          <ul class="why-list">
+            <li><span class="tick">✔</span>Battle-tested runbooks & SLAs</li>
+            <li><span class="tick">✔</span>On-time, on-budget execution</li>
+            <li><span class="tick">✔</span>Executive-ready reporting</li>
+          </ul>
+        </article>
+        <article class="why-card">
+          <div class="why-ico">🔐</div>
+          <h3 class="why-title">Secure by design</h3>
+          <p class="why-line">Zero-trust architecture and continuous monitoring across every layer.</p>
+          <ul class="why-list">
+            <li><span class="tick">✔</span>Least privilege & hardening</li>
+            <li><span class="tick">✔</span>Detection & response built-in</li>
+            <li><span class="tick">✔</span>Audit-friendly controls</li>
+          </ul>
+        </article>
+        <article class="why-card">
+          <div class="why-ico">🌍</div>
+          <h3 class="why-title">Global reach</h3>
+          <p class="why-line">Follow-the-sun support and multi-region infrastructure expertise.</p>
+          <ul class="why-list">
+            <li><span class="tick">✔</span>24/7 monitoring & support</li>
+            <li><span class="tick">✔</span>Multi-region rollouts</li>
+            <li><span class="tick">✔</span>DR & resiliency patterns</li>
+          </ul>
+        </article>
+        <article class="why-card">
+          <div class="why-ico">📈</div>
+          <h3 class="why-title">Measurable ROI</h3>
+          <p class="why-line">Transparent reporting tied to cost, risk, and uptime improvements.</p>
+          <ul class="why-list">
+            <li><span class="tick">✔</span>Real-time dashboards</li>
+            <li><span class="tick">✔</span>Cost & performance tuning</li>
+            <li><span class="tick">✔</span>Quarterly value reviews</li>
+          </ul>
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- SERVICES -->
+  <!-- ===== SERVICES ===== -->
   <section id="services">
     <div class="container">
-      <div><div class="eyebrow" style="font-size:12px;text-transform:uppercase;letter-spacing:1px;color:var(--muted)">Capabilities</div><h2>Enterprise-grade services</h2><p class="lead">From cloud and security to managed operations, we deliver resilient, cost-efficient solutions tailored for regulated, high-growth organisations.</p></div>
+      <div>
+        <div class="eyebrow" style="font-size:12px;text-transform:uppercase;letter-spacing:1px;color:var(--muted)">Capabilities</div>
+        <h2>Enterprise-grade services</h2>
+        <p class="lead">From cloud and security to managed operations, we deliver resilient, cost-efficient solutions tailored for regulated, high-growth organisations.</p>
+      </div>
       <div class="services-grid">
         <div class="service" data-service="cloud"><div class="service-ico">☁️</div><div><h4>Cloud Infrastructure</h4><p>Seamless migrations, hybrid patterns, and optimisation.</p></div></div>
         <div class="service" data-service="security"><div class="service-ico">🔒</div><div><h4>Cybersecurity</h4><p>Zero-trust design, monitoring, and incident response.</p></div></div>
@@ -192,10 +261,29 @@
     </div>
   </section>
 
-  <!-- CASE STUDIES -->
+  <!-- ===== EDUCATION ===== -->
+  <section id="education" class="section-alt">
+    <div class="container">
+      <div>
+        <div class="eyebrow" style="font-size:12px;text-transform:uppercase;letter-spacing:1px;color:var(--muted)">Education</div>
+        <h2>Learn IT your way</h2>
+        <p class="lead">Hands-on 1-1 coaching, structured courses, and in-depth ebooks — built by engineers, for engineers.</p>
+      </div>
+      <div class="edu-grid">
+        <div class="edu-card" data-edu="learning"><div class="edu-ico">👨‍🏫</div><div><h4>1-1 Learning</h4><p>Book a personalised one-hour session on topics like Cloud, Security, Networking, or Data.</p></div></div>
+        <div class="edu-card" data-edu="courses"><div class="edu-ico">📚</div><div><h4>Courses</h4><p>Self-paced or cohort-based programmes with labs, projects, and certificates.</p></div></div>
+        <div class="edu-card" data-edu="ebooks"><div class="edu-ico">📖</div><div><h4>Ebooks</h4><p>Deep-dive guides on modern architectures, zero-trust, and automation.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CASE STUDIES ===== -->
   <section id="cases" class="section-alt">
     <div class="container">
-      <div><div class="eyebrow" style="font-size:12px;text-transform:uppercase;letter-spacing:1px;color:var(--muted)">Case Studies</div><h2>Selected engagements</h2></div>
+      <div>
+        <div class="eyebrow" style="font-size:12px;text-transform:uppercase;letter-spacing:1px;color:var(--muted)">Case Studies</div>
+        <h2>Selected engagements</h2>
+      </div>
       <div class="case-grid">
         <article class="case"><div class="thumb"></div><div class="body"><div class="meta" style="font-size:12px;color:var(--muted)">Retail</div><h3>Global Cloud Migration</h3><div class="metric" style="color:var(--ink);font-weight:800">28% cost reduction • 6-week delivery</div><a href="#" class="cta">Read case study →</a></div></article>
         <article class="case"><div class="thumb"></div><div class="body"><div class="meta" style="font-size:12px;color:var(--muted)">Healthcare</div><h3>HIPAA-Compliant Platform</h3><div class="metric" style="color:var(--ink);font-weight:800">Zero data incidents • audit-ready</div><a href="#" class="cta">Read case study →</a></div></article>
@@ -204,19 +292,19 @@
     </div>
   </section>
 
-  <!-- TESTIMONIALS -->
+  <!-- ===== TESTIMONIALS ===== -->
   <section id="testimonials">
     <div class="container">
       <div><div class="eyebrow" style="font-size:12px;text-transform:uppercase;letter-spacing:1px;color:var(--muted)">What clients say</div><h2>Proven impact</h2></div>
       <div class="test-grid">
-        <div class="quote">“MJE IT delivered a seamless migration and a 40% reduction in our IT overheads.”<div class="who" style="margin-top:10px;color:var(--muted);font-size:14px">— Alex J., CTO, FinEdge</div></div>
+        <div class="quote">“TechNova delivered a seamless migration and a 40% reduction in our IT overheads.”<div class="who" style="margin-top:10px;color:var(--muted);font-size:14px">— Alex J., CTO, FinEdge</div></div>
         <div class="quote">“Their cybersecurity programme transformed our compliance posture overnight.”<div class="who" style="margin-top:10px;color:var(--muted);font-size:14px">— Maria L., Head of Ops, RetailNet</div></div>
         <div class="quote">“World-class managed IT — responsive, reliable, forward-thinking.”<div class="who" style="margin-top:10px;color:var(--muted);font-size:14px">— David K., Founder, CloudOps Ltd.</div></div>
       </div>
     </div>
   </section>
 
-  <!-- CONTACT -->
+  <!-- ===== CONTACT ===== -->
   <section id="contact" class="section-alt">
     <div class="container contact-wrap">
       <div class="card">
@@ -229,14 +317,14 @@
           </div>
           <div class="field"><label for="company">Company (optional)</label><input id="company" name="company"></div>
           <div class="field"><label for="message">Message</label><textarea id="message" name="message" required></textarea></div>
-          <div class="cta-row"><button class="btn primary" type="submit" id="sendBtn">Send Message</button><span id="formHint" class="hint"></span></div>
+          <div class="cta-row"><button class="btn primary" type="submit" id="sendBtn">Send Message</button><span id="formHint" class="hint" style="align-self:center;color:var(--muted);font-size:14px"></span></div>
         </form>
       </div>
     </div>
   </section>
 
-  <!-- TECH STACK -->
-  <section class="stack">
+  <!-- ===== OUR TECH STACK ===== -->
+  <section class="stack" aria-label="Our Tech Stack">
     <div class="container">
       <h2>Our Tech Stack</h2>
       <div class="logo-row">
@@ -250,17 +338,43 @@
   </section>
 </main>
 
+<!-- ===== FOOTER ===== -->
 <footer>
   <div class="container foot-grid">
-    <div><b style="color:var(--ink)">MJE IT</b> — IT Solutions Partner<br/>© <span id="yr"></span> All rights reserved.</div>
-    <div><div class="eyebrow" style="margin-bottom:6px;font-size:12px;text-transform:uppercase;letter-spacing:1px;color:var(--muted)">Stay updated</div><div style="display:flex;gap:10px"><input id="nl" placeholder="Your email" /><button class="btn primary" onclick="newsletter()">Join</button></div></div>
+    <div>
+      <b style="color:var(--ink)">MJE IT</b> — Solutions Partner<br/>
+      © <span id="yr"></span> All rights reserved.
+      <div class="foot-links">
+        <a onclick="openPolicy('privacy')">Privacy Policy</a>
+        <a onclick="openPolicy('terms')">Terms of Service</a>
+        <a onclick="openPolicy('cookies')">Cookie Policy</a>
+        <a onclick="openPolicy('about')">About</a>
+      </div>
+    </div>
+    <div>
+      <div class="eyebrow" style="margin-bottom:6px;font-size:12px;text-transform:uppercase;letter-spacing:1px;color:var(--muted)">Stay updated</div>
+      <div style="display:flex;gap:10px"><input id="nl" placeholder="Your email" /><button class="btn primary" onclick="newsletter()">Join</button></div>
+    </div>
   </div>
 </footer>
 
-<!-- MODAL -->
-<div id="modal" class="modal"><div class="modal-content"><span class="modal-close" onclick="closeModal()">✖</span><div id="modalBody"></div></div></div>
+<!-- ===== Cookie Banner ===== -->
+<div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Cookie consent">
+  <p>We use cookies to improve your experience and analyze traffic. See our <a style="color:var(--accent);cursor:pointer" onclick="openPolicy('cookies')">Cookie Policy</a>.</p>
+  <button class="prefs" onclick="openPolicy('cookies')">Preferences</button>
+  <button class="accept" onclick="acceptCookies()">Accept</button>
+</div>
+
+<!-- ===== Modal (reused for policies & popups) ===== -->
+<div id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalBody">
+  <div class="modal-content">
+    <span class="modal-close" onclick="closeModal()" aria-label="Close">✖</span>
+    <div id="modalBody"></div>
+  </div>
+</div>
 
 <script>
+  // Year
   document.getElementById('yr').textContent=new Date().getFullYear();
 
   // Counters
@@ -273,25 +387,100 @@
   }
   document.querySelectorAll('.num').forEach((el,i)=>{const raw=el.getAttribute('data-value')||el.textContent;setTimeout(()=>animateCounter(el,raw,1200+i*180),260+i*120);});
 
-  // Newsletter
-  function newsletter(){const v=document.getElementById('nl').value.trim();if(!v){alert("Please enter your email.");return;}alert("Thanks! You’re subscribed.");document.getElementById('nl').value="";}
+  // Newsletter demo
+  function newsletter(){
+    const v=document.getElementById('nl').value.trim();
+    if(!v){alert("Please enter your email.");return;}
+    alert("Thanks! You’re subscribed.");
+    document.getElementById('nl').value="";
+  }
 
-  // Contact (demo)
-  function handleContact(e){e.preventDefault();alert("Thanks! Your message has been received.");e.target.reset();return false;}
+  // Contact demo
+  function handleContact(e){
+    e.preventDefault();
+    alert("Thanks! Your message has been received.");
+    e.target.reset();
+    return false;
+  }
 
-  // Service modals with extra details
-  const servicesContent={
-    cloud:`<h2>Cloud Infrastructure</h2><p>We deliver seamless migrations, hybrid cloud patterns, cost optimisation, and multi-cloud governance frameworks that keep you resilient and compliant.</p><p><b>Additional Details:</b> Built with IaC (Terraform/Bicep), CI/CD, and automated guardrails for drift detection, policy, and security baselines.</p>`,
-    security:`<h2>Cybersecurity</h2><p>Zero-trust design, continuous monitoring, SOC integration, and rapid incident response. Protecting enterprise workloads at every layer.</p><p><b>Additional Details:</b> Includes red team exercises, posture management, vulnerability remediation SLAs, and executive risk reporting.</p>`,
-    managed:`<h2>Managed IT</h2><p>24/7 IT operations, device lifecycle management, ITIL processes, and automated ticketing to ensure your teams never stall.</p><p><b>Additional Details:</b> Self-service portals, proactive monitoring, and runbooks for escalations aligned to clear SLAs and KPIs.</p>`,
-    consulting:`<h2>Consulting & Strategy</h2><p>Technology roadmaps, governance models, digital transformation strategies, and hands-on leadership workshops.</p><p><b>Additional Details:</b> Operating model reviews, spend optimisation, capability heatmaps, and phased transformation plans.</p>`,
-    data:`<h2>Data & Analytics</h2><p>We build real-time pipelines, data lakes, and self-service analytics platforms to unlock actionable insights.</p><p><b>Additional Details:</b> Modern lakehouse patterns, governed semantics, BI dashboards, and ML integrations for predictive insights.</p>`,
-    infra:`<h2>Global Infrastructure</h2><p>Multi-region rollouts, systems integration, and high-availability architectures with proven SLAs.</p><p><b>Additional Details:</b> Network segmentation, DR/BCP, edge compute, and performance engineering for low-latency workloads.</p>`
+  // Modal (policies + services + education)
+  const policies={
+    privacy:`<h2>Privacy Policy</h2>
+      <p>We collect only the data necessary to provide our services and communicate with you. Data is stored securely and never sold.</p>
+      <p>You may request access, correction, or deletion of your personal data at any time by contacting us.</p>`,
+    terms:`<h2>Terms of Service</h2>
+      <p>By using our site and services, you agree to act lawfully and comply with acceptable use requirements.</p>
+      <p>We provide services “as is” and are not liable for indirect or consequential damages.</p>`,
+    cookies:`<h2>Cookie Policy</h2>
+      <p>We use functional and analytics cookies to improve your experience. Essential cookies are required for core site functionality.</p>
+      <p>You can disable non-essential cookies through your browser settings at any time.</p>`,
+    about:`<h2>About MJE IT</h2>
+      <p>MJE IT is a solutions partner delivering cloud, security, managed operations, and global infrastructure for regulated, high-growth organisations.</p>`
   };
-  const modal=document.getElementById("modal"),modalBody=document.getElementById("modalBody");
-  document.querySelectorAll(".service").forEach(s=>s.addEventListener("click",()=>{modal.classList.add("active");modalBody.innerHTML=servicesContent[s.dataset.service]||"";}));
+  const servicesContent={
+    cloud:`<h2>Cloud Infrastructure</h2>
+      <p>Seamless migrations, hybrid patterns, cost optimisation, and multi-cloud governance.</p>
+      <p><b>Additional Details:</b> IaC (Terraform/Bicep), CI/CD, automated guardrails, drift detection, policy, and baseline security.</p>`,
+    security:`<h2>Cybersecurity</h2>
+      <p>Zero-trust design, continuous monitoring, SOC integration, and rapid incident response.</p>
+      <p><b>Additional Details:</b> Red/blue team exercises, posture management, vulnerability SLAs, and executive risk reports.</p>`,
+    managed:`<h2>Managed IT</h2>
+      <p>24/7 operations, device lifecycle management, ITIL processes, and automation.</p>
+      <p><b>Additional Details:</b> Self-service portals, proactive monitoring, and escalation runbooks aligned to strict SLAs.</p>`,
+    consulting:`<h2>Consulting & Strategy</h2>
+      <p>Roadmaps, governance models, operating model reviews, and transformation strategies.</p>
+      <p><b>Additional Details:</b> Spend optimisation, capability heatmaps, and phased delivery plans.</p>`,
+    data:`<h2>Data & Analytics</h2>
+      <p>Real-time pipelines, lakehouse platforms, and self-service BI for actionable insights.</p>
+      <p><b>Additional Details:</b> Governed semantics, dashboards, and ML integrations for predictive analytics.</p>`,
+    infra:`<h2>Global Infrastructure</h2>
+      <p>Multi-region rollouts, systems integration, and high-availability architectures.</p>
+      <p><b>Additional Details:</b> Network segmentation, BCP/DR, edge compute, and performance engineering.</p>`
+  };
+  const eduContent={
+    learning:`<h2>1-1 Learning</h2>
+      <p>Book a focused one-hour session with an expert across Cloud, Cybersecurity, Networking, or Data.</p>
+      <p><b>How it works:</b> Pick a topic → Schedule → Live mentoring and hands-on guidance with take-home notes.</p>
+      <a href="https://calendly.com/your-link" target="_blank" class="btn primary">Book a Session</a>`,
+    courses:`<h2>Courses</h2>
+      <p>Structured programmes with labs and projects. Learn at your pace or join a live cohort.</p>
+      <p><b>Examples:</b> Cloud Foundations, Zero-Trust Essentials, ITIL for Ops, Data Analytics with Python.</p>
+      <a href="https://your-course-platform.com" target="_blank" class="btn primary">Enroll Now</a>`,
+    ebooks:`<h2>Ebooks</h2>
+      <p>Practical, actionable guides to modern IT architectures and operations.</p>
+      <p><b>Titles:</b> Modern Cloud Architectures, Zero-Trust in Practice, Automation Runbooks, Data Engineering Playbook.</p>
+      <a href="https://your-store.com" target="_blank" class="btn primary">Buy Now</a>`
+  };
+
+  const modal=document.getElementById("modal"), modalBody=document.getElementById("modalBody");
+  function openPolicy(key){modal.classList.add("active");modalBody.innerHTML=(policies[key]||"");}
   function closeModal(){modal.classList.remove("active")}
   modal.addEventListener("click",e=>{if(e.target===modal)closeModal();});
+
+  // Service popups
+  document.querySelectorAll(".service").forEach(card=>{
+    card.addEventListener("click",()=>{
+      const key=card.getAttribute("data-service");
+      modal.classList.add("active");
+      modalBody.innerHTML=servicesContent[key]||"";
+    });
+  });
+
+  // Education popups
+  document.querySelectorAll(".edu-card").forEach(card=>{
+    card.addEventListener("click",()=>{
+      const key=card.getAttribute("data-edu");
+      modal.classList.add("active");
+      modalBody.innerHTML=eduContent[key]||"";
+    });
+  });
+
+  // Cookie consent
+  function acceptCookies(){
+    localStorage.setItem("cookiesAccepted","true");
+    document.getElementById("cookieBanner").style.display="none";
+  }
+  if(localStorage.getItem("cookiesAccepted")){document.getElementById("cookieBanner").style.display="none";}
 </script>
 </body>
 </html>
