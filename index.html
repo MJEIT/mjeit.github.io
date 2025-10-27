@@ -29,8 +29,7 @@
   .nav{display:flex;align-items:center;justify-content:space-between;height:90px;}
   .brand{display:flex;align-items:center;gap:12px}
   .brand .logo{background:transparent;border:none;width:auto;height:auto;}
-  .brand .logo img{max-height:60px;} /* bigger logo */
-  .brand .name span{color:var(--muted);font-size:12px}
+  .brand .logo img{max-height:60px;}
   .links{display:flex;align-items:center;gap:20px}
   .links a{font-weight:600;font-size:14px;opacity:.85;position:relative;padding:6px 4px;}
   .links a:hover{opacity:1}
@@ -107,6 +106,8 @@
   .case .thumb{height:140px;background:linear-gradient(135deg,#0c1f17,#0b1713);border-radius:10px;margin-bottom:12px}
   .case a.cta{color:var(--accent);font-weight:600}
 
+  .viewmore{margin-top:10px;font-size:13px;color:var(--muted);font-style:italic}
+
   /* ===== Contact ===== */
   .contact-wrap{display:grid;gap:26px}@media(min-width:980px){.contact-wrap{grid-template-columns:1fr}}
   .field{display:flex;flex-direction:column;gap:8px} label{font-size:13px;color:var(--muted)}
@@ -146,8 +147,7 @@
 <header>
   <div class="container nav">
     <div class="brand">
-      <div class="logo"><img src="img/MJE Logo (6).png" alt="MJEIT logo"></div>
-      <div class="name"><b></b><span></span></div>
+      <div class="logo"><img src="img/MJE Logo (6).png" alt="MJE IT logo"></div>
     </div>
     <nav class="links" aria-label="Primary">
       <a href="#hero" class="active">Home</a>
@@ -191,7 +191,7 @@
     </div>
   </section>
 
-  <!-- ===== WHY WORK WITH US (green grid) ===== -->
+  <!-- ===== WHY WORK WITH US ===== -->
   <section class="why-wrap" id="why">
     <div class="container why">
       <div class="subtitle">Why work with us</div>
@@ -251,12 +251,12 @@
         <p class="lead">From cloud and security to managed operations, we deliver resilient, cost-efficient solutions tailored for regulated, high-growth organisations.</p>
       </div>
       <div class="services-grid">
-        <div class="service" data-service="cloud"><div class="service-ico">☁️</div><div><h4>Cloud Infrastructure</h4><p>Seamless migrations, hybrid patterns, and optimisation.</p></div></div>
-        <div class="service" data-service="security"><div class="service-ico">🔒</div><div><h4>Cybersecurity</h4><p>Zero-trust design, monitoring, and incident response.</p></div></div>
-        <div class="service" data-service="managed"><div class="service-ico">🛠️</div><div><h4>Managed IT</h4><p>24/7 support, lifecycle management, and automation.</p></div></div>
-        <div class="service" data-service="consulting"><div class="service-ico">🧭</div><div><h4>Consulting & Strategy</h4><p>Roadmaps, governance, and modernisation strategy.</p></div></div>
-        <div class="service" data-service="data"><div class="service-ico">📊</div><div><h4>Data & Analytics</h4><p>Real-time pipelines and insight platforms.</p></div></div>
-        <div class="service" data-service="infra"><div class="service-ico">🏗️</div><div><h4>Global Infrastructure</h4><p>Multi-region rollouts and systems integration.</p></div></div>
+        <div class="service" data-service="cloud"><div class="service-ico">☁️</div><div><h4>Cloud Infrastructure</h4><p>Seamless migrations, hybrid patterns, and optimisation.</p><div class="viewmore">View more →</div></div></div>
+        <div class="service" data-service="security"><div class="service-ico">🔒</div><div><h4>Cybersecurity</h4><p>Zero-trust design, monitoring, and incident response.</p><div class="viewmore">View more →</div></div></div>
+        <div class="service" data-service="managed"><div class="service-ico">🛠️</div><div><h4>Managed IT</h4><p>24/7 support, lifecycle management, and automation.</p><div class="viewmore">View more →</div></div></div>
+        <div class="service" data-service="consulting"><div class="service-ico">🧭</div><div><h4>Consulting & Strategy</h4><p>Roadmaps, governance, and modernisation strategy.</p><div class="viewmore">View more →</div></div></div>
+        <div class="service" data-service="data"><div class="service-ico">📊</div><div><h4>Data & Analytics</h4><p>Real-time pipelines and insight platforms.</p><div class="viewmore">View more →</div></div></div>
+        <div class="service" data-service="infra"><div class="service-ico">🏗️</div><div><h4>Global Infrastructure</h4><p>Multi-region rollouts and systems integration.</p><div class="viewmore">View more →</div></div></div>
       </div>
     </div>
   </section>
@@ -270,9 +270,9 @@
         <p class="lead">Hands-on 1-1 coaching, structured courses, and in-depth ebooks — built by engineers, for engineers.</p>
       </div>
       <div class="edu-grid">
-        <div class="edu-card" data-edu="learning"><div class="edu-ico">👨‍🏫</div><div><h4>1-1 Learning</h4><p>Book a personalised one-hour session on topics like Cloud, Security, Networking, or Data.</p></div></div>
-        <div class="edu-card" data-edu="courses"><div class="edu-ico">📚</div><div><h4>Courses</h4><p>Self-paced or cohort-based programmes with labs, projects, and certificates.</p></div></div>
-        <div class="edu-card" data-edu="ebooks"><div class="edu-ico">📖</div><div><h4>Ebooks</h4><p>Deep-dive guides on modern architectures, zero-trust, and automation.</p></div></div>
+        <div class="edu-card" data-edu="learning"><div class="edu-ico">👨‍🏫</div><div><h4>1-1 Learning</h4><p>Book a personalised one-hour session on topics like Cloud, Security, Networking, or Data.</p><div class="viewmore">View more →</div></div></div>
+        <div class="edu-card" data-edu="courses"><div class="edu-ico">📚</div><div><h4>Courses</h4><p>Self-paced or cohort-based programmes with labs, projects, and certificates.</p><div class="viewmore">View more →</div></div></div>
+        <div class="edu-card" data-edu="ebooks"><div class="edu-ico">📖</div><div><h4>Ebooks</h4><p>Deep-dive guides on modern architectures, zero-trust, and automation.</p><div class="viewmore">View more →</div></div></div>
       </div>
     </div>
   </section>
@@ -297,7 +297,7 @@
     <div class="container">
       <div><div class="eyebrow" style="font-size:12px;text-transform:uppercase;letter-spacing:1px;color:var(--muted)">What clients say</div><h2>Proven impact</h2></div>
       <div class="test-grid">
-        <div class="quote">“TechNova delivered a seamless migration and a 40% reduction in our IT overheads.”<div class="who" style="margin-top:10px;color:var(--muted);font-size:14px">— Alex J., CTO, FinEdge</div></div>
+        <div class="quote">“MJE IT delivered a seamless migration and a 40% reduction in our IT overheads.”<div class="who" style="margin-top:10px;color:var(--muted);font-size:14px">— Alex J., CTO, FinEdge</div></div>
         <div class="quote">“Their cybersecurity programme transformed our compliance posture overnight.”<div class="who" style="margin-top:10px;color:var(--muted);font-size:14px">— Maria L., Head of Ops, RetailNet</div></div>
         <div class="quote">“World-class managed IT — responsive, reliable, forward-thinking.”<div class="who" style="margin-top:10px;color:var(--muted);font-size:14px">— David K., Founder, CloudOps Ltd.</div></div>
       </div>
