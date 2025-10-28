@@ -351,22 +351,38 @@
 
   <!-- ===== CONTACT ===== -->
   <section id="contact" class="section-alt">
-    <div class="container contact-wrap">
-      <div class="card">
-        <h2>Tell us about your project</h2>
-        <p class="lead">We typically reply within one business day.</p>
-        <form onsubmit="return handleContact(event)" novalidate style="margin-top:16px">
-          <div style="display:grid;gap:12px;grid-template-columns:1fr 1fr">
-            <div class="field"><label for="name">Full Name</label><input id="name" name="name" required></div>
-            <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" required></div>
+  <div class="container contact-wrap">
+    <div class="card">
+      <h2>Tell us about your project</h2>
+      <p class="lead">We typically reply within one business day.</p>
+
+      <form action="https://formspree.io/f/your-contact-form-id" method="POST" class="contact-form">
+        <div class="form-grid">
+          <div class="field">
+            <label for="name">Full Name</label>
+            <input id="name" name="name" required>
           </div>
-          <div class="field"><label for="company">Company (optional)</label><input id="company" name="company"></div>
-          <div class="field"><label for="message">Message</label><textarea id="message" name="message" required></textarea></div>
-          <div class="cta-row"><button class="btn primary" type="submit" id="sendBtn">Send Message</button><span id="formHint" class="hint" style="align-self:center;color:var(--muted);font-size:14px"></span></div>
-        </form>
-      </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required>
+          </div>
+        </div>
+        <div class="field">
+          <label for="company">Company (optional)</label>
+          <input id="company" name="company">
+        </div>
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+        <div class="cta-row">
+          <button class="btn primary" type="submit">Send Message</button>
+        </div>
+      </form>
     </div>
-  </section>
+  </div>
+</section>
+
 
 
 </main>
@@ -383,10 +399,6 @@
         <a onclick="openPolicy('cookies')">Cookie Policy</a>
         <a onclick="openPolicy('about')">About</a>
       </div>
-    </div>
-    <div>
-      <div class="eyebrow" style="margin-bottom:6px;font-size:12px;text-transform:uppercase;letter-spacing:1px;color:var(--muted)">Stay updated</div>
-      <div style="display:flex;gap:10px"><input id="nl" placeholder="Your email" /><button class="btn primary" onclick="newsletter()">Join</button></div>
     </div>
   </div>
 </footer>
