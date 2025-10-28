@@ -286,46 +286,43 @@
       <h2>Selected engagements</h2>
     </div>
     <div class="case-grid">
-      
-      <!-- Legal: Hogan Lovells -->
+
       <article class="case">
-        <div class="thumb" style="display:flex;align-items:center;justify-content:center;background:#fff;border-radius:10px;padding:20px;">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/e/ec/Hogan_Lovells_logo.svg" alt="Hogan Lovells Logo" style="max-height:60px;max-width:100%;object-fit:contain;">
+        <div class="thumb" style="display:flex;align-items:center;justify-content:center;background:#fff;">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/e/ec/Hogan_Lovells_logo.svg" alt="Hogan Lovells Logo" style="max-height:80px;object-fit:contain;">
         </div>
         <div class="body">
           <div class="meta" style="font-size:12px;color:var(--muted)">Legal</div>
           <h3>Global Server Migration</h3>
           <div class="metric" style="color:var(--ink);font-weight:800">28% cost reduction • 6-week delivery</div>
-          <a href="#" class="cta">Read case study →</a>
+          <a href="javascript:void(0)" class="cta" onclick="openCase('legal')">Read case study →</a>
         </div>
       </article>
-      
-      <!-- Healthcare: NHS -->
+
       <article class="case">
-        <div class="thumb" style="display:flex;align-items:center;justify-content:center;background:#fff;border-radius:10px;padding:20px;">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/d/d3/National_Health_Service_%28England%29_logo.svg" alt="NHS Logo" style="max-height:60px;max-width:100%;object-fit:contain;">
+        <div class="thumb" style="display:flex;align-items:center;justify-content:center;background:#fff;">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/d/d3/National_Health_Service_%28England%29_logo.svg" alt="NHS Logo" style="max-height:80px;object-fit:contain;">
         </div>
         <div class="body">
           <div class="meta" style="font-size:12px;color:var(--muted)">Healthcare</div>
           <h3>M365 User Migration</h3>
           <div class="metric" style="color:var(--ink);font-weight:800">Zero data incidents • audit-ready</div>
-          <a href="#" class="cta">Read case study →</a>
+          <a href="javascript:void(0)" class="cta" onclick="openCase('healthcare')">Read case study →</a>
         </div>
       </article>
-      
-      <!-- Retail: O2 -->
+
       <article class="case">
-        <div class="thumb" style="display:flex;align-items:center;justify-content:center;background:#fff;border-radius:10px;padding:20px;">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/4/45/O2-Logo.svg" alt="O2 Logo" style="max-height:60px;max-width:100%;object-fit:contain;">
+        <div class="thumb" style="display:flex;align-items:center;justify-content:center;background:#fff;">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/4/45/O2-Logo.svg" alt="O2 Logo" style="max-height:80px;object-fit:contain;">
         </div>
         <div class="body">
           <div class="meta" style="font-size:12px;color:var(--muted)">Retail</div>
           <h3>UK Win10 Rollout</h3>
           <div class="metric" style="color:var(--ink);font-weight:800">99.999% uptime • millisecond insights</div>
-          <a href="#" class="cta">Read case study →</a>
+          <a href="javascript:void(0)" class="cta" onclick="openCase('retail')">Read case study →</a>
         </div>
       </article>
-      
+
     </div>
   </div>
 </section>
@@ -521,6 +518,60 @@
     document.getElementById("cookieBanner").style.display="none";
   }
   if(localStorage.getItem("cookiesAccepted")){document.getElementById("cookieBanner").style.display="none";}
+
+  // ===== Case Studies Content with Logos =====
+const caseStudyOrder = ["legal", "healthcare", "retail"];
+let currentCaseIndex = 0;
+
+const caseStudies = {
+  legal: `
+    <div style="text-align:center;margin-bottom:20px;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/e/ec/Hogan_Lovells_logo.svg" alt="Hogan Lovells Logo" style="max-height:60px;object-fit:contain;">
+    </div>
+    <h2>Case Study: Hogan Lovells</h2>
+    <p><b>Challenge:</b> Hogan Lovells required a global server migration with strict compliance requirements and minimal downtime.</p>
+    <p><b>Solution:</b> MJE IT delivered a phased migration strategy with automated runbooks, zero-trust security controls, and full compliance with GDPR and industry regulations.</p>
+    <p><b>Outcome:</b> Achieved a <span style="color:var(--accent);font-weight:700">28% reduction in infrastructure costs</span> and completed migration in just 6 weeks without any major incidents.</p>
+  `,
+  healthcare: `
+    <div style="text-align:center;margin-bottom:20px;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/d/d3/National_Health_Service_%28England%29_logo.svg" alt="NHS Logo" style="max-height:60px;object-fit:contain;">
+    </div>
+    <h2>Case Study: NHS</h2>
+    <p><b>Challenge:</b> NHS required the migration of thousands of users to Microsoft 365 with zero data loss and compliance readiness.</p>
+    <p><b>Solution:</b> Our team engineered a secure migration framework, performed rigorous testing, and applied best-practice governance for sensitive healthcare data.</p>
+    <p><b>Outcome:</b> Migration delivered with <span style="color:var(--accent);font-weight:700">zero incidents</span>, fully audit-ready, and significantly improved collaboration across teams.</p>
+  `,
+  retail: `
+    <div style="text-align:center;margin-bottom:20px;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/45/O2-Logo.svg" alt="O2 Logo" style="max-height:60px;object-fit:contain;">
+    </div>
+    <h2>Case Study: O2</h2>
+    <p><b>Challenge:</b> O2 required a UK-wide Windows 10 rollout across retail branches while ensuring 24/7 service continuity.</p>
+    <p><b>Solution:</b> We designed a scalable deployment framework, automated endpoint provisioning, and executed rollout in phases during off-peak hours.</p>
+    <p><b>Outcome:</b> Delivered with <span style="color:var(--accent);font-weight:700">99.999% uptime</span>, providing a seamless upgrade and future-proofed devices for thousands of staff.</p>
+  `
+};
+
+function openCase(key) {
+  currentCaseIndex = caseStudyOrder.indexOf(key);
+  showCaseStudy();
+}
+
+function showCaseStudy() {
+  const key = caseStudyOrder[currentCaseIndex];
+  modal.classList.add("active");
+  modalBody.innerHTML = caseStudies[key] + `
+    <div style="text-align:right;margin-top:20px;">
+      <button class="btn primary" onclick="nextCase()">Next →</button>
+    </div>`;
+}
+
+function nextCase() {
+  currentCaseIndex = (currentCaseIndex + 1) % caseStudyOrder.length;
+  showCaseStudy();
+}
+
 </script>
 </body>
 </html>
