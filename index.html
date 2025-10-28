@@ -16,35 +16,40 @@
     --maxw:1180px;--ok:#bff6cf;
   }
   *{box-sizing:border-box}
-  body{margin:0;background:linear-gradient(180deg,var(--bg) 0%,#0a0b0c 100%);color:var(--text);
-    font:400 16px/1.7 Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;}
-  img{max-width:100%;display:block} a{color:inherit;text-decoration:none}
+  body{margin:0;background:linear-gradient(180deg,var(--bg) 0%,#0a0b0c 100%);color:var(--text);font:400 16px/1.7 Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial}
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
   .container{max-width:var(--maxw);margin:0 auto;padding:0 24px}
   h1,h2,h3,h4{color:var(--ink);margin:0 0 16px}
-  h1{font-size:48px;font-weight:800;line-height:1.1} h2{font-size:32px;font-weight:700}
-  h3{font-size:22px;font-weight:600} .lead{font-size:18px;max-width:760px;color:var(--muted)}
+  h1{font-size:48px;font-weight:800;line-height:1.1}
+  h2{font-size:32px;font-weight:700}
+  h3{font-size:22px;font-weight:600}
+  .lead{font-size:18px;max-width:760px;color:var(--muted)}
+  section{padding:80px 0}
+  .section-alt{background:var(--bg-2)}
 
   /* ===== Header (larger logo) ===== */
   header{position:sticky;top:0;z-index:1000;backdrop-filter:blur(10px);background:rgba(15,17,18,.9);border-bottom:1px solid var(--edge-soft)}
-  .nav{display:flex;align-items:center;justify-content:space-between;height:90px;}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:90px}
   .brand{display:flex;align-items:center;gap:12px}
-  .brand .logo{background:transparent;border:none;width:auto;height:auto;}
-  .brand .logo img{max-height:60px;}
+  .brand .logo{background:transparent;border:none;width:auto;height:auto}
+  .brand .logo img{max-height:60px}
   .links{display:flex;align-items:center;gap:20px}
-  .links a{font-weight:600;font-size:14px;opacity:.85;position:relative;padding:6px 4px;}
+  .links a{font-weight:600;font-size:14px;opacity:.85;position:relative;padding:6px 4px}
   .links a:hover{opacity:1}
-  .links a.active::after{content:"";position:absolute;left:0;right:0;bottom:-8px;height:2px;background:linear-gradient(90deg,var(--accent),var(--accent-2));border-radius:2px;}
-  .links .cta{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#07130f;padding:10px 16px;border-radius:999px;font-weight:700;box-shadow:0 4px 14px rgba(0,195,107,.25);transition:all .25s ease;}
+  .links a.active::after{content:"";position:absolute;left:0;right:0;bottom:-8px;height:2px;background:linear-gradient(90deg,var(--accent),var(--accent-2));border-radius:2px}
+  .links .support{border:1px solid var(--edge-soft);padding:8px 12px;border-radius:10px}
+  .links .cta{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#07130f;padding:10px 16px;border-radius:999px;font-weight:700;box-shadow:0 4px 14px rgba(0,195,107,.25);transition:all .25s ease}
   .links .cta:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(0,195,107,.35)}
-
-  section{padding:80px 0}.section-alt{background:var(--bg-2)}
 
   /* ===== Hero with subtle accent ===== */
   .hero-wrap{position:relative;overflow:hidden}
-  .hero-wrap::before{content:"";position:absolute;inset:-20% -10% auto -10%;height:60%;
+  .hero-wrap::before{
+    content:"";position:absolute;inset:-20% -10% auto -10%;height:60%;
     background:radial-gradient(800px 400px at 20% 10%,rgba(0,195,107,.10),transparent 60%),
                radial-gradient(700px 420px at 80% -10%,rgba(0,224,132,.08),transparent 65%);
-    pointer-events:none}
+    pointer-events:none
+  }
   .hero{position:relative;display:grid;gap:36px}
   @media(min-width:980px){.hero{grid-template-columns:1fr 420px;align-items:start}}
   .cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:24px}
@@ -61,28 +66,27 @@
   .status-card{background:var(--panel);border-radius:16px;padding:20px;box-shadow:0 4px 16px rgba(0,0,0,.4)}
 
   /* ===== Why Work With Us (green grid bg) ===== */
-  .why-wrap{position:relative;background:linear-gradient(180deg,#0f1212 0%, #0c0e0f 100%);overflow:hidden;}
+  .why-wrap{position:relative;background:linear-gradient(180deg,#0f1212 0%, #0c0e0f 100%);overflow:hidden}
   .why-wrap::before{
-    content:""; position:absolute; inset:0;
+    content:"";position:absolute;inset:0;
     background:
       radial-gradient(700px 300px at 15% 0%, rgba(0,224,132,.10), transparent 60%),
       radial-gradient(700px 300px at 85% 0%, rgba(0,195,107,.10), transparent 60%),
       linear-gradient(0deg, rgba(255,255,255,.04) 1px, transparent 1px),
       linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);
-    background-size: auto, auto, 32px 32px, 32px 32px;
-    mask: linear-gradient(#000, transparent 85%);
-    -webkit-mask: linear-gradient(#000, transparent 85%);
-    pointer-events:none;
+    background-size:auto,auto,32px 32px,32px 32px;
+    mask:linear-gradient(#000, transparent 85%);-webkit-mask:linear-gradient(#000, transparent 85%);
+    pointer-events:none
   }
-  .why{position:relative;text-align:center;}
+  .why{position:relative;text-align:center}
   .why .subtitle{color:var(--muted);text-transform:uppercase;letter-spacing:1px;font-size:12px;margin-bottom:8px}
   .why .headline{margin-bottom:8px}
   .why .kicker{color:var(--muted);max-width:760px;margin:0 auto}
-  .why-grid{margin-top:28px;display:grid;gap:18px;}
+  .why-grid{margin-top:28px;display:grid;gap:18px}
   @media(min-width:980px){.why-grid{grid-template-columns:repeat(4,1fr)}}
   .why-card{background:linear-gradient(180deg,var(--panel),#101212);border-radius:14px;padding:18px 16px;text-align:left;box-shadow:0 3px 12px rgba(0,0,0,.35);transition:transform .25s ease,box-shadow .25s ease}
   .why-card:hover{transform:translateY(-4px);box-shadow:0 10px 24px rgba(0,0,0,.5)}
-  .why-ico{width:44px;height:44px;border-radius:12px;background:#0d2016;border:1px solid var(--edge-soft);display:flex;align-items:center;justify-content:center;color:var(--accent);font-size:20px;margin-bottom:10px;}
+  .why-ico{width:44px;height:44px;border-radius:12px;background:#0d2016;border:1px solid var(--edge-soft);display:flex;align-items:center;justify-content:center;color:var(--accent);font-size:20px;margin-bottom:10px}
   .why-title{color:var(--ink);font-weight:800;margin:0 0 6px}
   .why-line{color:var(--text);margin:0 0 10px}
   .why-list{list-style:none;margin:0;padding:0;display:grid;gap:6px}
@@ -97,36 +101,34 @@
     .test-grid{grid-template-columns:repeat(3,1fr)}
     .edu-grid{grid-template-columns:repeat(3,1fr)}
   }
-  .service,.case,.quote,.card,.edu-card{
-    background:var(--panel);border-radius:14px;box-shadow:0 3px 12px rgba(0,0,0,.4);padding:20px;
-    transition:transform .25s ease,box-shadow .25s ease;cursor:pointer
-  }
+  .service,.case,.quote,.card,.edu-card{background:var(--panel);border-radius:14px;box-shadow:0 3px 12px rgba(0,0,0,.4);padding:20px;transition:transform .25s ease,box-shadow .25s ease;cursor:pointer}
   .service:hover,.case:hover,.quote:hover,.card:hover,.edu-card:hover{transform:translateY(-4px);box-shadow:0 8px 20px rgba(0,0,0,.5)}
   .service-ico,.edu-ico{width:48px;height:48px;border-radius:12px;background:#0d2016;display:flex;align-items:center;justify-content:center;font-size:20px;color:var(--accent)}
   .case .thumb{height:140px;background:linear-gradient(135deg,#0c1f17,#0b1713);border-radius:10px;margin-bottom:12px}
   .case a.cta{color:var(--accent);font-weight:600}
-
   .viewmore{margin-top:10px;font-size:13px;color:var(--muted);font-style:italic}
 
   /* ===== Contact ===== */
-  .contact-wrap{display:grid;gap:26px}@media(min-width:980px){.contact-wrap{grid-template-columns:1fr}}
-  .field{display:flex;flex-direction:column;gap:8px} label{font-size:13px;color:var(--muted)}
+  .contact-wrap{display:grid;gap:26px}
+  @media(min-width:980px){.contact-wrap{grid-template-columns:1fr}}
+  .field{display:flex;flex-direction:column;gap:8px}
+  label{font-size:13px;color:var(--muted)}
   input,textarea{width:100%;background:#0f1312;border:1px solid var(--edge);color:var(--text);padding:12px 14px;border-radius:10px;font:inherit;outline:none;transition:border-color .2s,box-shadow .2s}
   input:focus,textarea:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(0,195,107,.15)}
+  .contact-form{display:grid;gap:14px}
+  .form-grid{display:grid;gap:12px}
+  @media(min-width:720px){.form-grid{grid-template-columns:1fr 1fr}}
+  textarea{min-height:140px}
 
-  /* ===== Footer & Tech Stack ===== */
+  /* ===== Footer & Links ===== */
   footer{border-top:1px solid var(--edge);padding:32px 0;color:var(--muted);font-size:14px}
-  .foot-grid{display:grid;gap:20px}@media(min-width:980px){.foot-grid{grid-template-columns:1fr 1fr}}
+  .foot-grid{display:grid;gap:20px}
+  @media(min-width:980px){.foot-grid{grid-template-columns:1fr 1fr}}
   .foot-links{display:flex;flex-wrap:wrap;gap:14px;margin-top:10px}
   .foot-links a{cursor:pointer}
-  .stack{text-align:center}
-  .stack .logo-row{display:flex;flex-wrap:wrap;gap:24px;justify-content:center;margin-top:20px}
-  .stack .logo-chip{display:flex;align-items:center;justify-content:center;padding:12px 18px;border-radius:12px;background:#0f1212;border:1px solid var(--edge-soft)}
-  .stack .logo-chip img{height:28px;max-width:140px}
 
   /* ===== Cookie Banner ===== */
-  .cookie-banner{position:fixed;left:16px;right:16px;bottom:16px;z-index:3000;
-    background:var(--panel);border:1px solid var(--edge-soft);border-radius:12px;padding:12px 14px;display:flex;gap:12px;align-items:center;box-shadow:0 8px 28px rgba(0,0,0,.5)}
+  .cookie-banner{position:fixed;left:16px;right:16px;bottom:16px;z-index:3000;background:var(--panel);border:1px solid var(--edge-soft);border-radius:12px;padding:12px 14px;display:flex;gap:12px;align-items:center;box-shadow:0 8px 28px rgba(0,0,0,.5)}
   .cookie-banner p{margin:0;flex:1}
   .cookie-banner button{border:0;border-radius:999px;padding:10px 14px;font-weight:700;cursor:pointer}
   .cookie-banner .accept{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#06110d}
@@ -138,7 +140,7 @@
   .modal-content{position:relative;background:var(--panel);padding:28px;max-width:720px;width:92%;border-radius:16px;box-shadow:0 8px 28px rgba(0,0,0,.6);transform:scale(.95);transition:transform .3s ease}
   .modal.active .modal-content{transform:scale(1)}
   .modal-close{position:absolute;top:16px;right:20px;font-size:20px;color:var(--muted);cursor:pointer}
-  .modal .btn{margin-top:16px;}
+  .modal .btn{margin-top:16px}
 </style>
 </head>
 <body>
@@ -146,16 +148,14 @@
 <!-- ===== HEADER ===== -->
 <header>
   <div class="container nav">
-    <div class="brand">
-      <div class="logo"><img src="img/MJE Logo (6).png" alt="MJE IT logo"></div>
-    </div>
+    <div class="brand"><div class="logo"><img src="img/MJE Logo (6).png" alt="MJE IT logo"></div></div>
     <nav class="links" aria-label="Primary">
       <a href="#hero" class="active">Home</a>
       <a href="#services">Services</a>
       <a href="#education">Education</a>
       <a href="#cases">Case Studies</a>
       <a href="#testimonials">Testimonials</a>
-       <a href="https://support.mjeit.com" target="_blank" class="support">Support</a>
+      <a href="https://support.mjeit.com" target="_blank" class="support">Support</a>
       <a href="#contact" class="cta">Contact</a>
     </nav>
   </div>
@@ -193,63 +193,55 @@
   </section>
 
   <!-- ===== WHY WORK WITH US ===== -->
-<section class="why-wrap" id="why">
-  <div class="container why">
-    <div class="subtitle">Why work with MJE IT</div>
-    <h2 class="headline">A trusted partner with 16+ years of IT delivery</h2>
-    <p class="kicker">
-      At MJE IT, we bring over a decade and a half of experience delivering complex IT solutions across industries including legal, healthcare, retail, and finance. Our approach is practical, proven, and always focused on business outcomes.
-    </p>
-    <div class="why-grid">
-
-      <article class="why-card">
-        <div class="why-ico">🧑‍💻</div>
-        <h3 class="why-title">Proven expertise</h3>
-        <p class="why-line">With 16+ years in IT, we’ve successfully delivered thousands of projects and migrations of every scale.</p>
-        <ul class="why-list">
-          <li><span class="tick">✔</span> 100,000+ support tickets resolved</li>
-          <li><span class="tick">✔</span> 9,000+ servers migrated</li>
-          <li><span class="tick">✔</span> Enterprise-grade SLAs achieved consistently</li>
-        </ul>
-      </article>
-
-      <article class="why-card">
-        <div class="why-ico">🔒</div>
-        <h3 class="why-title">Security-first approach</h3>
-        <p class="why-line">We design and operate with security at the core — protecting data, people, and reputations.</p>
-        <ul class="why-list">
-          <li><span class="tick">✔</span> Zero-trust architecture by default</li>
-          <li><span class="tick">✔</span> Continuous monitoring & compliance</li>
-          <li><span class="tick">✔</span> Proven results in regulated industries</li>
-        </ul>
-      </article>
-
-      <article class="why-card">
-        <div class="why-ico">🌍</div>
-        <h3 class="why-title">Cross-industry experience</h3>
-        <p class="why-line">From law firms to national healthcare providers and retail leaders, our work spans diverse industries.</p>
-        <ul class="why-list">
-          <li><span class="tick">✔</span> Legal: Hogan Lovells global migration</li>
-          <li><span class="tick">✔</span> Healthcare: NHS Microsoft 365 rollout</li>
-          <li><span class="tick">✔</span> Retail: O2 Windows 10 deployment</li>
-        </ul>
-      </article>
-
-      <article class="why-card">
-        <div class="why-ico">🚀</div>
-        <h3 class="why-title">Outcome-driven</h3>
-        <p class="why-line">We align every project with measurable business value — improving efficiency, reducing costs, and increasing uptime.</p>
-        <ul class="why-list">
-          <li><span class="tick">✔</span> Cost reductions up to 28%</li>
-          <li><span class="tick">✔</span> Uptime consistently at 99.95%+</li>
-          <li><span class="tick">✔</span> Executive-ready reporting and insights</li>
-        </ul>
-      </article>
-
+  <section class="why-wrap" id="why">
+    <div class="container why">
+      <div class="subtitle">Why work with MJE IT</div>
+      <h2 class="headline">A trusted partner with 16+ years of IT delivery</h2>
+      <p class="kicker">At MJE IT, we bring over a decade and a half of experience delivering complex IT solutions across industries including legal, healthcare, retail, and finance. Our approach is practical, proven, and always focused on business outcomes.</p>
+      <div class="why-grid">
+        <article class="why-card">
+          <div class="why-ico">🧑‍💻</div>
+          <h3 class="why-title">Proven expertise</h3>
+          <p class="why-line">16+ years, thousands of successful projects and migrations, from on-prem to cloud-first.</p>
+          <ul class="why-list">
+            <li><span class="tick">✔</span> 100,000+ support tickets resolved</li>
+            <li><span class="tick">✔</span> 9,000+ servers migrated</li>
+            <li><span class="tick">✔</span> Enterprise SLAs delivered consistently</li>
+          </ul>
+        </article>
+        <article class="why-card">
+          <div class="why-ico">🔒</div>
+          <h3 class="why-title">Security-first</h3>
+          <p class="why-line">Zero-trust controls, continuous monitoring, and audit-ready processes baked in.</p>
+          <ul class="why-list">
+            <li><span class="tick">✔</span> Least privilege & hardening</li>
+            <li><span class="tick">✔</span> Detection & response</li>
+            <li><span class="tick">✔</span> Documentation & governance</li>
+          </ul>
+        </article>
+        <article class="why-card">
+          <div class="why-ico">🌍</div>
+          <h3 class="why-title">Cross-industry</h3>
+          <p class="why-line">We’ve shipped outcomes for legal, healthcare, retail, and finance at scale.</p>
+          <ul class="why-list">
+            <li><span class="tick">✔</span> Legal: Hogan Lovells migration</li>
+            <li><span class="tick">✔</span> Healthcare: NHS M365 rollout</li>
+            <li><span class="tick">✔</span> Retail: O2 nationwide upgrade</li>
+          </ul>
+        </article>
+        <article class="why-card">
+          <div class="why-ico">📈</div>
+          <h3 class="why-title">Outcome-driven</h3>
+          <p class="why-line">Clear metrics on cost, risk, and uptime — with executive-ready reporting.</p>
+          <ul class="why-list">
+            <li><span class="tick">✔</span> Up to 28% cost reduction</li>
+            <li><span class="tick">✔</span> 99.95%+ uptime</li>
+            <li><span class="tick">✔</span> Quarterly value reviews</li>
+          </ul>
+        </article>
+      </div>
     </div>
-  </div>
-</section>
-
+  </section>
 
   <!-- ===== SERVICES ===== -->
   <section id="services">
@@ -286,56 +278,50 @@
     </div>
   </section>
 
-<!-- ===== CASE STUDIES ===== -->
-<section id="cases" class="section-alt">
-  <div class="container">
-    <div>
-      <div class="eyebrow" style="font-size:12px;text-transform:uppercase;letter-spacing:1px;color:var(--muted)">Case Studies</div>
-      <h2>Selected engagements</h2>
+  <!-- ===== CASE STUDIES ===== -->
+  <section id="cases" class="section-alt">
+    <div class="container">
+      <div>
+        <div class="eyebrow" style="font-size:12px;text-transform:uppercase;letter-spacing:1px;color:var(--muted)">Case Studies</div>
+        <h2>Selected engagements</h2>
+      </div>
+      <div class="case-grid">
+        <article class="case">
+          <div class="thumb" style="display:flex;align-items:center;justify-content:center;background:#fff">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/ec/Hogan_Lovells_logo.svg" alt="Hogan Lovells Logo" style="max-height:80px;object-fit:contain">
+          </div>
+          <div class="body">
+            <div class="meta" style="font-size:12px;color:var(--muted)">Legal</div>
+            <h3>Global Server Migration</h3>
+            <div class="metric" style="color:var(--ink);font-weight:800">28% cost reduction • 6-week delivery</div>
+            <a href="javascript:void(0)" class="cta" data-case="legal">Read case study →</a>
+          </div>
+        </article>
+        <article class="case">
+          <div class="thumb" style="display:flex;align-items:center;justify-content:center;background:#fff">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/d/d3/National_Health_Service_%28England%29_logo.svg" alt="NHS Logo" style="max-height:80px;object-fit:contain">
+          </div>
+          <div class="body">
+            <div class="meta" style="font-size:12px;color:var(--muted)">Healthcare</div>
+            <h3>M365 User Migration</h3>
+            <div class="metric" style="color:var(--ink);font-weight:800">Zero data incidents • audit-ready</div>
+            <a href="javascript:void(0)" class="cta" data-case="healthcare">Read case study →</a>
+          </div>
+        </article>
+        <article class="case">
+          <div class="thumb" style="display:flex;align-items:center;justify-content:center;background:#fff">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/45/O2-Logo.svg" alt="O2 Logo" style="max-height:80px;object-fit:contain">
+          </div>
+          <div class="body">
+            <div class="meta" style="font-size:12px;color:var(--muted)">Retail</div>
+            <h3>UK Win10 Rollout</h3>
+            <div class="metric" style="color:var(--ink);font-weight:800">99.999% uptime • millisecond insights</div>
+            <a href="javascript:void(0)" class="cta" data-case="retail">Read case study →</a>
+          </div>
+        </article>
+      </div>
     </div>
-    <div class="case-grid">
-
-      <article class="case">
-        <div class="thumb" style="display:flex;align-items:center;justify-content:center;background:#fff;">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/e/ec/Hogan_Lovells_logo.svg" alt="Hogan Lovells Logo" style="max-height:80px;object-fit:contain;">
-        </div>
-        <div class="body">
-          <div class="meta" style="font-size:12px;color:var(--muted)">Legal</div>
-          <h3>Global Server Migration</h3>
-          <div class="metric" style="color:var(--ink);font-weight:800">28% cost reduction • 6-week delivery</div>
-          <a href="javascript:void(0)" class="cta" onclick="openCase('legal')">Read case study →</a>
-        </div>
-      </article>
-
-      <article class="case">
-        <div class="thumb" style="display:flex;align-items:center;justify-content:center;background:#fff;">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/d/d3/National_Health_Service_%28England%29_logo.svg" alt="NHS Logo" style="max-height:80px;object-fit:contain;">
-        </div>
-        <div class="body">
-          <div class="meta" style="font-size:12px;color:var(--muted)">Healthcare</div>
-          <h3>M365 User Migration</h3>
-          <div class="metric" style="color:var(--ink);font-weight:800">Zero data incidents • audit-ready</div>
-          <a href="javascript:void(0)" class="cta" onclick="openCase('healthcare')">Read case study →</a>
-        </div>
-      </article>
-
-      <article class="case">
-        <div class="thumb" style="display:flex;align-items:center;justify-content:center;background:#fff;">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/4/45/O2-Logo.svg" alt="O2 Logo" style="max-height:80px;object-fit:contain;">
-        </div>
-        <div class="body">
-          <div class="meta" style="font-size:12px;color:var(--muted)">Retail</div>
-          <h3>UK Win10 Rollout</h3>
-          <div class="metric" style="color:var(--ink);font-weight:800">99.999% uptime • millisecond insights</div>
-          <a href="javascript:void(0)" class="cta" onclick="openCase('retail')">Read case study →</a>
-        </div>
-      </article>
-
-    </div>
-  </div>
-</section>
-
-
+  </section>
 
   <!-- ===== TESTIMONIALS ===== -->
   <section id="testimonials">
@@ -351,48 +337,29 @@
 
   <!-- ===== CONTACT ===== -->
   <section id="contact" class="section-alt">
-  <div class="container contact-wrap">
-    <div class="card">
-      <h2>Tell us about your project</h2>
-      <p class="lead">We typically reply within one business day.</p>
-
-      <form action="https://formspree.io/f/your-contact-form-id" method="POST" class="contact-form">
-        <div class="form-grid">
-          <div class="field">
-            <label for="name">Full Name</label>
-            <input id="name" name="name" required>
+    <div class="container contact-wrap">
+      <div class="card">
+        <h2>Tell us about your project</h2>
+        <p class="lead">We typically reply within one business day.</p>
+        <form action="https://formspree.io/f/xayrlqwn" method="POST" class="contact-form">
+          <div class="form-grid">
+            <div class="field"><label for="name">Full Name</label><input id="name" name="name" required></div>
+            <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" required></div>
           </div>
-          <div class="field">
-            <label for="email">Email</label>
-            <input id="email" name="email" type="email" required>
-          </div>
-        </div>
-        <div class="field">
-          <label for="company">Company (optional)</label>
-          <input id="company" name="company">
-        </div>
-        <div class="field">
-          <label for="message">Message</label>
-          <textarea id="message" name="message" required></textarea>
-        </div>
-        <div class="cta-row">
-          <button class="btn primary" type="submit">Send Message</button>
-        </div>
-      </form>
+          <div class="field"><label for="company">Company (optional)</label><input id="company" name="company"></div>
+          <div class="field"><label for="message">Message</label><textarea id="message" name="message" required></textarea></div>
+          <div class="cta-row"><button class="btn primary" type="submit">Send Message</button></div>
+        </form>
+      </div>
     </div>
-  </div>
-</section>
-
-
-
+  </section>
 </main>
 
 <!-- ===== FOOTER ===== -->
 <footer>
   <div class="container foot-grid">
     <div>
-      <b style="color:var(--ink)">MJE IT</b> — Solutions Partner<br/>
-      © <span id="yr"></span> All rights reserved.
+      <b style="color:var(--ink)">MJE IT</b> — Solutions Partner<br/>© <span id="yr"></span> All rights reserved.
       <div class="foot-links">
         <a onclick="openPolicy('privacy')">Privacy Policy</a>
         <a onclick="openPolicy('terms')">Terms of Service</a>
@@ -400,6 +367,7 @@
         <a onclick="openPolicy('about')">About</a>
       </div>
     </div>
+    <div></div>
   </div>
 </footer>
 
@@ -410,7 +378,7 @@
   <button class="accept" onclick="acceptCookies()">Accept</button>
 </div>
 
-<!-- ===== Modal (reused for policies & popups) ===== -->
+<!-- ===== Modal (reused for policies, services, education, case studies) ===== -->
 <div id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalBody">
   <div class="modal-content">
     <span class="modal-close" onclick="closeModal()" aria-label="Close">✖</span>
@@ -432,154 +400,58 @@
   }
   document.querySelectorAll('.num').forEach((el,i)=>{const raw=el.getAttribute('data-value')||el.textContent;setTimeout(()=>animateCounter(el,raw,1200+i*180),260+i*120);});
 
-  // Newsletter demo
-  function newsletter(){
-    const v=document.getElementById('nl').value.trim();
-    if(!v){alert("Please enter your email.");return;}
-    alert("Thanks! You’re subscribed.");
-    document.getElementById('nl').value="";
-  }
+  // Cookie consent
+  function acceptCookies(){localStorage.setItem("cookiesAccepted","true");document.getElementById("cookieBanner").style.display="none"}
+  if(localStorage.getItem("cookiesAccepted")){document.getElementById("cookieBanner").style.display="none"}
 
-  // Contact demo
-  function handleContact(e){
-    e.preventDefault();
-    alert("Thanks! Your message has been received.");
-    e.target.reset();
-    return false;
+  // Modal (policies + services + education + case studies)
+  const modal=document.getElementById("modal"), modalBody=document.getElementById("modalBody");
+  function openPolicy(key){
+    const policies={
+      privacy:`<h2>Privacy Policy</h2><p>We collect only the data necessary to provide our services and communicate with you. Data is stored securely and never sold.</p><p>You may request access, correction, or deletion of your personal data at any time by contacting us.</p>`,
+      terms:`<h2>Terms of Service</h2><p>By using our site and services, you agree to act lawfully and comply with acceptable use requirements.</p><p>We provide services “as is” and are not liable for indirect or consequential damages.</p>`,
+      cookies:`<h2>Cookie Policy</h2><p>We use functional and analytics cookies to improve your experience. Essential cookies are required for core site functionality.</p><p>You can disable non-essential cookies through your browser settings at any time.</p>`,
+      about:`<h2>About MJE IT</h2><p>MJE IT is a solutions partner delivering cloud, security, managed operations, and global infrastructure for regulated, high-growth organisations.</p>`
+    };
+    modal.classList.add("active");modalBody.innerHTML=(policies[key]||"");
   }
+  function closeModal(){modal.classList.remove("active")}
+  modal.addEventListener("click",e=>{if(e.target===modal)closeModal()});
 
-  // Modal (policies + services + education)
-  const policies={
-    privacy:`<h2>Privacy Policy</h2>
-      <p>We collect only the data necessary to provide our services and communicate with you. Data is stored securely and never sold.</p>
-      <p>You may request access, correction, or deletion of your personal data at any time by contacting us.</p>`,
-    terms:`<h2>Terms of Service</h2>
-      <p>By using our site and services, you agree to act lawfully and comply with acceptable use requirements.</p>
-      <p>We provide services “as is” and are not liable for indirect or consequential damages.</p>`,
-    cookies:`<h2>Cookie Policy</h2>
-      <p>We use functional and analytics cookies to improve your experience. Essential cookies are required for core site functionality.</p>
-      <p>You can disable non-essential cookies through your browser settings at any time.</p>`,
-    about:`<h2>About MJE IT</h2>
-      <p>MJE IT is a solutions partner delivering cloud, security, managed operations, and global infrastructure for regulated, high-growth organisations.</p>`
-  };
+  // Services/Education content
   const servicesContent={
-    cloud:`<h2>Cloud Infrastructure</h2>
-      <p>Seamless migrations, hybrid patterns, cost optimisation, and multi-cloud governance.</p>
-      <p><b>Additional Details:</b> IaC (Terraform/Bicep), CI/CD, automated guardrails, drift detection, policy, and baseline security.</p>`,
-    security:`<h2>Cybersecurity</h2>
-      <p>Zero-trust design, continuous monitoring, SOC integration, and rapid incident response.</p>
-      <p><b>Additional Details:</b> Red/blue team exercises, posture management, vulnerability SLAs, and executive risk reports.</p>`,
-    managed:`<h2>Managed IT</h2>
-      <p>24/7 operations, device lifecycle management, ITIL processes, and automation.</p>
-      <p><b>Additional Details:</b> Self-service portals, proactive monitoring, and escalation runbooks aligned to strict SLAs.</p>`,
-    consulting:`<h2>Consulting & Strategy</h2>
-      <p>Roadmaps, governance models, operating model reviews, and transformation strategies.</p>
-      <p><b>Additional Details:</b> Spend optimisation, capability heatmaps, and phased delivery plans.</p>`,
-    data:`<h2>Data & Analytics</h2>
-      <p>Real-time pipelines, lakehouse platforms, and self-service BI for actionable insights.</p>
-      <p><b>Additional Details:</b> Governed semantics, dashboards, and ML integrations for predictive analytics.</p>`,
-    infra:`<h2>Global Infrastructure</h2>
-      <p>Multi-region rollouts, systems integration, and high-availability architectures.</p>
-      <p><b>Additional Details:</b> Network segmentation, BCP/DR, edge compute, and performance engineering.</p>`
+    cloud:`<h2>Cloud Infrastructure</h2><p>Seamless migrations, hybrid patterns, cost optimisation, and multi-cloud governance.</p><p><b>Additional Details:</b> IaC (Terraform/Bicep), CI/CD, automated guardrails, drift detection, policy, and baseline security.</p>`,
+    security:`<h2>Cybersecurity</h2><p>Zero-trust design, continuous monitoring, SOC integration, and rapid incident response.</p><p><b>Additional Details:</b> Red/blue team exercises, posture management, vulnerability SLAs, and executive risk reports.</p>`,
+    managed:`<h2>Managed IT</h2><p>24/7 operations, device lifecycle management, ITIL processes, and automation.</p><p><b>Additional Details:</b> Self-service portals, proactive monitoring, and escalation runbooks aligned to strict SLAs.</p>`,
+    consulting:`<h2>Consulting & Strategy</h2><p>Roadmaps, governance models, operating model reviews, and transformation strategies.</p><p><b>Additional Details:</b> Spend optimisation, capability heatmaps, and phased delivery plans.</p>`,
+    data:`<h2>Data & Analytics</h2><p>Real-time pipelines, lakehouse platforms, and self-service BI for actionable insights.</p><p><b>Additional Details:</b> Governed semantics, dashboards, and ML integrations for predictive analytics.</p>`,
+    infra:`<h2>Global Infrastructure</h2><p>Multi-region rollouts, systems integration, and high-availability architectures.</p><p><b>Additional Details:</b> Network segmentation, BCP/DR, edge compute, and performance engineering.</p>`
   };
   const eduContent={
-    learning:`<h2>1-1 Learning</h2>
-      <p>Book a focused one-hour session with an expert across Cloud, Cybersecurity, Networking, or Data.</p>
-      <p><b>How it works:</b> Pick a topic → Schedule → Live mentoring and hands-on guidance with take-home notes.</p>
-      <a href="https://calendly.com/your-link" target="_blank" class="btn primary">Book a Session</a>`,
-    courses:`<h2>Courses</h2>
-      <p>Structured programmes with labs and projects. Learn at your pace or join a live cohort.</p>
-      <p><b>Examples:</b> Cloud Foundations, Zero-Trust Essentials, ITIL for Ops, Data Analytics with Python.</p>
-      <a href="https://your-course-platform.com" target="_blank" class="btn primary">Enroll Now</a>`,
-    ebooks:`<h2>Ebooks</h2>
-      <p>Practical, actionable guides to modern IT architectures and operations.</p>
-      <p><b>Titles:</b> Modern Cloud Architectures, Zero-Trust in Practice, Automation Runbooks, Data Engineering Playbook.</p>
-      <a href="https://your-store.com" target="_blank" class="btn primary">Buy Now</a>`
+    learning:`<h2>1-1 Learning</h2><p>Book a focused one-hour session with an expert across Cloud, Cybersecurity, Networking, or Data.</p><p><b>How it works:</b> Pick a topic → Schedule → Live mentoring and hands-on guidance with take-home notes.</p><a href="https://calendly.com/your-link" target="_blank" class="btn primary">Book a Session</a>`,
+    courses:`<h2>Courses</h2><p>Structured programmes with labs and projects. Learn at your pace or join a live cohort.</p><p><b>Examples:</b> Cloud Foundations, Zero-Trust Essentials, ITIL for Ops, Data Analytics with Python.</p><a href="https://your-course-platform.com" target="_blank" class="btn primary">Enroll Now</a>`,
+    ebooks:`<h2>Ebooks</h2><p>Practical, actionable guides to modern IT architectures and operations.</p><p><b>Titles:</b> Modern Cloud Architectures, Zero-Trust in Practice, Automation Runbooks, Data Engineering Playbook.</p><a href="https://your-store.com" target="_blank" class="btn primary">Buy Now</a>`
   };
 
-  const modal=document.getElementById("modal"), modalBody=document.getElementById("modalBody");
-  function openPolicy(key){modal.classList.add("active");modalBody.innerHTML=(policies[key]||"");}
-  function closeModal(){modal.classList.remove("active")}
-  modal.addEventListener("click",e=>{if(e.target===modal)closeModal();});
-
-  // Service popups
   document.querySelectorAll(".service").forEach(card=>{
-    card.addEventListener("click",()=>{
-      const key=card.getAttribute("data-service");
-      modal.classList.add("active");
-      modalBody.innerHTML=servicesContent[key]||"";
-    });
+    card.addEventListener("click",(e)=>{e.preventDefault();e.stopPropagation();const key=card.getAttribute("data-service");modal.classList.add("active");modalBody.innerHTML=servicesContent[key]||"";});
   });
-
-  // Education popups
   document.querySelectorAll(".edu-card").forEach(card=>{
-    card.addEventListener("click",()=>{
-      const key=card.getAttribute("data-edu");
-      modal.classList.add("active");
-      modalBody.innerHTML=eduContent[key]||"";
-    });
+    card.addEventListener("click",(e)=>{e.preventDefault();e.stopPropagation();const key=card.getAttribute("data-edu");modal.classList.add("active");modalBody.innerHTML=eduContent[key]||"";});
   });
 
-  // Cookie consent
-  function acceptCookies(){
-    localStorage.setItem("cookiesAccepted","true");
-    document.getElementById("cookieBanner").style.display="none";
-  }
-  if(localStorage.getItem("cookiesAccepted")){document.getElementById("cookieBanner").style.display="none";}
-
-  // ===== Case Studies Content with Logos =====
-const caseStudyOrder = ["legal", "healthcare", "retail"];
-let currentCaseIndex = 0;
-
-const caseStudies = {
-  legal: `
-    <div style="text-align:center;margin-bottom:20px;">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/e/ec/Hogan_Lovells_logo.svg" alt="Hogan Lovells Logo" style="max-height:60px;object-fit:contain;">
-    </div>
-    <h2>Case Study: Hogan Lovells</h2>
-    <p><b>Challenge:</b> Hogan Lovells required a global server migration with strict compliance requirements and minimal downtime.</p>
-    <p><b>Solution:</b> MJE IT delivered a phased migration strategy with automated runbooks, zero-trust security controls, and full compliance with GDPR and industry regulations.</p>
-    <p><b>Outcome:</b> Achieved a <span style="color:var(--accent);font-weight:700">28% reduction in infrastructure costs</span> and completed migration in just 6 weeks without any major incidents.</p>
-  `,
-  healthcare: `
-    <div style="text-align:center;margin-bottom:20px;">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/d/d3/National_Health_Service_%28England%29_logo.svg" alt="NHS Logo" style="max-height:60px;object-fit:contain;">
-    </div>
-    <h2>Case Study: NHS</h2>
-    <p><b>Challenge:</b> NHS required the migration of thousands of users to Microsoft 365 with zero data loss and compliance readiness.</p>
-    <p><b>Solution:</b> Our team engineered a secure migration framework, performed rigorous testing, and applied best-practice governance for sensitive healthcare data.</p>
-    <p><b>Outcome:</b> Migration delivered with <span style="color:var(--accent);font-weight:700">zero incidents</span>, fully audit-ready, and significantly improved collaboration across teams.</p>
-  `,
-  retail: `
-    <div style="text-align:center;margin-bottom:20px;">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/4/45/O2-Logo.svg" alt="O2 Logo" style="max-height:60px;object-fit:contain;">
-    </div>
-    <h2>Case Study: O2</h2>
-    <p><b>Challenge:</b> O2 required a UK-wide Windows 10 rollout across retail branches while ensuring 24/7 service continuity.</p>
-    <p><b>Solution:</b> We designed a scalable deployment framework, automated endpoint provisioning, and executed rollout in phases during off-peak hours.</p>
-    <p><b>Outcome:</b> Delivered with <span style="color:var(--accent);font-weight:700">99.999% uptime</span>, providing a seamless upgrade and future-proofed devices for thousands of staff.</p>
-  `
-};
-
-function openCase(key) {
-  currentCaseIndex = caseStudyOrder.indexOf(key);
-  showCaseStudy();
-}
-
-function showCaseStudy() {
-  const key = caseStudyOrder[currentCaseIndex];
-  modal.classList.add("active");
-  modalBody.innerHTML = caseStudies[key] + `
-    <div style="text-align:right;margin-top:20px;">
-      <button class="btn primary" onclick="nextCase()">Next →</button>
-    </div>`;
-}
-
-function nextCase() {
-  currentCaseIndex = (currentCaseIndex + 1) % caseStudyOrder.length;
-  showCaseStudy();
-}
-
+  // ===== Case Studies Content with Logos & Next button (no scroll jump) =====
+  const caseStudyOrder=["legal","healthcare","retail"];let currentCaseIndex=0;
+  const caseStudies={
+    legal:`<div style="text-align:center;margin-bottom:20px;"><img src="https://upload.wikimedia.org/wikipedia/commons/e/ec/Hogan_Lovells_logo.svg" alt="Hogan Lovells Logo" style="max-height:60px;object-fit:contain"></div><h2>Case Study: Hogan Lovells</h2><p><b>Challenge:</b> Hogan Lovells required a global server migration with strict compliance requirements and minimal downtime.</p><p><b>Solution:</b> MJE IT delivered a phased migration strategy with automated runbooks, zero-trust security controls, and full compliance with GDPR and industry regulations.</p><p><b>Outcome:</b> Achieved a <span style="color:var(--accent);font-weight:700">28% reduction in infrastructure costs</span> and completed migration in just 6 weeks without any major incidents.</p>`,
+    healthcare:`<div style="text-align:center;margin-bottom:20px;"><img src="https://upload.wikimedia.org/wikipedia/commons/d/d3/National_Health_Service_%28England%29_logo.svg" alt="NHS Logo" style="max-height:60px;object-fit:contain"></div><h2>Case Study: NHS</h2><p><b>Challenge:</b> NHS required the migration of thousands of users to Microsoft 365 with zero data loss and compliance readiness.</p><p><b>Solution:</b> Our team engineered a secure migration framework, performed rigorous testing, and applied best-practice governance for sensitive healthcare data.</p><p><b>Outcome:</b> Migration delivered with <span style="color:var(--accent);font-weight:700">zero incidents</span>, fully audit-ready, and significantly improved collaboration across teams.</p>`,
+    retail:`<div style="text-align:center;margin-bottom:20px;"><img src="https://upload.wikimedia.org/wikipedia/commons/4/45/O2-Logo.svg" alt="O2 Logo" style="max-height:60px;object-fit:contain"></div><h2>Case Study: O2</h2><p><b>Challenge:</b> O2 required a UK-wide Windows 10 rollout across retail branches while ensuring 24/7 service continuity.</p><p><b>Solution:</b> We designed a scalable deployment framework, automated endpoint provisioning, and executed rollout in phases during off-peak hours.</p><p><b>Outcome:</b> Delivered with <span style="color:var(--accent);font-weight:700">99.999% uptime</span>, providing a seamless upgrade and future-proofed devices for thousands of staff.</p>`
+  };
+  function showCaseStudy(){const key=caseStudyOrder[currentCaseIndex];modal.classList.add("active");modalBody.innerHTML=caseStudies[key]+`<div style="display:flex;justify-content:space-between;gap:8px;margin-top:20px"><button class="btn ghost" onclick="closeModal()">Close</button><button class="btn primary" onclick="nextCase()">Next →</button></div>`;}
+  function nextCase(){currentCaseIndex=(currentCaseIndex+1)%caseStudyOrder.length;showCaseStudy();}
+  document.querySelectorAll('[data-case]').forEach(link=>{
+    link.addEventListener('click',(e)=>{e.preventDefault();e.stopPropagation();const key=e.currentTarget.getAttribute('data-case');currentCaseIndex=caseStudyOrder.indexOf(key);if(currentCaseIndex<0)currentCaseIndex=0;showCaseStudy();});
+  });
 </script>
 </body>
 </html>
