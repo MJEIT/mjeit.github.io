@@ -167,7 +167,7 @@
     <div class="container hero">
       <div>
         <h1>Empowering your <span style="color:var(--accent)">digital future</span></h1>
-        <p class="lead">Modern IT engineered for outcomes. Cloud, Security and Managed Services build for performance and growth.</p>
+        <p class="lead">From cloud migrations to security and support | We make technology work the way it should.</p>
         <div class="stats">
           <div class="stat"><div class="ico">🏆</div><div><div class="num" data-value="16+">0</div><div>Years Experience</div></div></div>
           <div class="stat"><div class="ico">🛠️</div><div><div class="num" data-value="100000+">0</div><div>Tickets Resolved</div></div></div>
@@ -358,19 +358,79 @@
 
 <!-- ===== FOOTER ===== -->
 <footer>
-  <div class="container foot-grid">
-    <div>
-      <b style="color:var(--ink)">MJE IT</b> — Solutions Partner<br/>© <span id="yr"></span> All rights reserved.
-      <div class="foot-links">
-        <a onclick="openPolicy('privacy')">Privacy Policy</a>
-        <a onclick="openPolicy('terms')">Terms of Service</a>
-        <a onclick="openPolicy('cookies')">Cookie Policy</a>
-        <a onclick="openPolicy('about')">About</a>
-      </div>
+  <div class="container" 
+       style="display:flex;flex-direction:column;align-items:flex-end;text-align:right;">
+
+    <!-- Social Icons FIRST -->
+    <div style="margin-bottom:20px;display:flex;gap:14px;justify-content:flex-end;">
+
+      <!-- X -->
+      <a href="https://x.com/yourhandle" target="_blank" aria-label="X"
+         style="color:var(--muted);transition:color .3s ease;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
+             viewBox="0 0 24 24">
+          <path d="M18.244 2H21.5l-7.68 8.773L22 22h-6.422l-5.033-6.158L4.8 22H1.5l8.205-9.384L2 2h6.578l4.521 5.726L18.244 2zm-1.084 18h1.633L7.847 3.955H6.092l11.068 16.045z"/>
+        </svg>
+      </a>
+
+      <!-- LinkedIn -->
+      <a href="https://linkedin.com/in/yourprofile" target="_blank" aria-label="LinkedIn"
+         style="color:var(--muted);transition:color .3s ease;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" 
+             viewBox="0 0 24 24">
+          <path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.25c-.97 0-1.75-.79-1.75-1.75s.78-1.75 1.75-1.75 1.75.79 1.75 1.75-.78 1.75-1.75 1.75zm13.5 11.25h-3v-5.6c0-1.33-.03-3.05-1.86-3.05-1.86 0-2.15 1.45-2.15 2.95v5.7h-3v-10h2.88v1.37h.04c.4-.75 1.38-1.54 2.84-1.54 3.04 0 3.6 2 3.6 4.6v5.57z"/>
+        </svg>
+      </a>
+
+      <!-- Email -->
+      <a href="mailto:info@mjeit.com" aria-label="Email"
+         style="color:var(--muted);transition:color .3s ease;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" 
+             fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 13.065l-11.999-7.065v16h24v-16l-12.001 7.065zm0-2.13l11.999-7.065h-24l12.001 7.065z"/>
+        </svg>
+      </a>
     </div>
-    <div></div>
+
+    <!-- Brand + Copyright BELOW Social Icons -->
+    <div style="margin-bottom:16px;">
+      <b style="color:var(--ink)">MJE IT</b> — Solutions Partner<br/>
+      © <span id="yr"></span> All rights reserved.
+    </div>
+
+    <!-- Policy Links (Right-Aligned) -->
+    <div style="display:flex;gap:16px;justify-content:flex-end;text-align:right;">
+      <a onclick="openPolicy('privacy')" style="cursor:pointer;">Privacy Policy</a>
+      <a onclick="openPolicy('terms')" style="cursor:pointer;">Terms of Service</a>
+      <a onclick="openPolicy('cookies')" style="cursor:pointer;">Cookie Policy</a>
+      <a onclick="openPolicy('about')" style="cursor:pointer;">About</a>
+    </div>
+
   </div>
+
+
+  <!-- Scroll to Top Button -->
+  <button id="scrollTopBtn" aria-label="Scroll to top" 
+    style="position:fixed;bottom:30px;right:30px;background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#06110d;border:none;border-radius:50%;width:46px;height:46px;font-size:20px;cursor:pointer;box-shadow:0 6px 18px rgba(0,195,107,.3);display:none;transition:all .3s ease;">
+    ↑
+  </button>
 </footer>
+
+<script>
+  // Scroll to top functionality
+  const scrollBtn = document.getElementById("scrollTopBtn");
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      scrollBtn.style.display = "block";
+    } else {
+      scrollBtn.style.display = "none";
+    }
+  });
+  scrollBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+</script>
+
 
 <!-- ===== Cookie Banner ===== -->
 <div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Cookie consent">
