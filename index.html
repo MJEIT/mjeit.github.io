@@ -529,7 +529,44 @@
           <p style="margin:0;">Cloud Foundations, Zero-Trust Essentials, ITIL for Ops, and more structured programmes will appear here as they go live.</p>
         </div>
       </div>`,
-    ebooks:`<h2>Ebooks</h2><p>Practical, actionable guides to modern IT architectures and operations.</p><p><b>Titles:</b> Modern Cloud Architectures, Zero-Trust in Practice, Automation Runbooks, Data Engineering Playbook.</p><a href="https://your-store.com" target="_blank" class="btn primary">Buy Now</a>`
+    ebooks:`<h2>Ebooks</h2>
+      <p>Practical, no-fluff resources to help you plan, launch, and grow your tech career.</p>
+
+      <div style="margin-top:16px;display:grid;gap:20px;">
+
+        <!-- Free Ebook: Tech Career Guide -->
+        <div style="display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,2fr);gap:18px;align-items:flex-start;padding:16px;border-radius:12px;background:#131616;border:1px solid rgba(255,255,255,0.06);">
+          <div style="border-radius:10px;overflow:hidden;background:#111;">
+            <img src="img/Ebook Promotion.png" alt="Tech Career Guide ebook cover" style="width:100%;height:auto;display:block;">
+          </div>
+          <div>
+            <h3 style="margin:0 0 8px;">Free Ebook: Tech Career Guide</h3>
+            <p style="margin:0 0 10px;">A practical guide to choosing your path in IT, understanding real-world roles, and planning your first 12–24 months in tech.</p>
+            <ul style="margin:0 0 14px 18px;padding:0;font-size:14px;color:var(--muted);">
+              <li>Understand core paths: support, cloud, security, data, and more</li>
+              <li>Learn what employers actually look for in junior candidates</li>
+              <li>Get a simple learning roadmap and interview preparation tips</li>
+            </ul>
+
+            <form id="ebookForm" action="https://formspree.io/f/xayrlqwn" method="POST" style="display:grid;gap:10px;margin-top:8px;">
+              <input type="hidden" name="form_name" value="Tech Career Guide Download">
+              <div style="display:grid;gap:8px;">
+                <label for="ebook-email" style="font-size:13px;color:var(--muted);">Enter your email to receive the download link:</label>
+                <input id="ebook-email" name="email" type="email" required placeholder="you@example.com" style="width:100%;background:#0f1312;border:1px solid var(--edge);color:var(--text);padding:10px 12px;border-radius:999px;font:inherit;outline:none;">
+              </div>
+              <button type="submit" class="btn primary" style="justify-content:center;">Get the free ebook</button>
+              <div id="ebookStatus" style="font-size:13px;color:var(--muted);min-height:18px;"></div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Placeholder for future (paid) ebooks -->
+        <div style="padding:16px;border-radius:12px;background:#101213;border:1px dashed rgba(255,255,255,0.12);">
+          <h3 style="margin-top:0;">More ebooks coming soon</h3>
+          <p style="margin:0;">Advanced guides on cloud, zero-trust security, and automation will appear here, including both free and paid titles.</p>
+        </div>
+
+      </div>`
   };
 
   document.querySelectorAll(".service").forEach(card=>{
@@ -550,6 +587,42 @@
   function nextCase(){currentCaseIndex=(currentCaseIndex+1)%caseStudyOrder.length;showCaseStudy();}
   document.querySelectorAll('[data-case]').forEach(link=>{
     link.addEventListener('click',(e)=>{e.preventDefault();e.stopPropagation();const key=e.currentTarget.getAttribute('data-case');currentCaseIndex=caseStudyOrder.indexOf(key);if(currentCaseIndex<0)currentCaseIndex=0;showCaseStudy();});
+  });
+
+  // ===== Ebook form handler (Formspree + download) =====
+  function handleEbookForm(form){
+    const statusEl=document.getElementById('ebookStatus');
+    const submitBtn=form.querySelector('button[type="submit"]');
+    if(statusEl) statusEl.textContent='Sending...';
+    if(submitBtn){submitBtn.disabled=true;submitBtn.textContent='Sending...';}
+
+    const formData=new FormData(form);
+    fetch(form.action,{
+      method:'POST',
+      body:formData,
+      headers:{'Accept':'application/json'}
+    }).then(response=>{
+      if(response.ok){
+        if(statusEl) statusEl.textContent='Thank you! Your download will open in a new tab.';
+        // TODO: update this path to the real location of your PDF
+        const downloadUrl='downloads/Tech Career Guide.pdf';
+        window.open(downloadUrl,'_blank');
+        form.reset();
+      }else{
+        if(statusEl) statusEl.textContent='There was a problem submitting the form. Please try again.';
+      }
+    }).catch(()=>{
+      if(statusEl) statusEl.textContent='There was a problem submitting the form. Please try again.';
+    }).finally(()=>{
+      if(submitBtn){submitBtn.disabled=false;submitBtn.textContent='Get the free ebook';}
+    });
+  }
+
+  document.addEventListener('submit',function(e){
+    if(e.target && e.target.id==='ebookForm'){
+      e.preventDefault();
+      handleEbookForm(e.target);
+    }
   });
 </script>
 </body>
